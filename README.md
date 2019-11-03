@@ -1,1 +1,1 @@
-# QuickQ2
+# QuickQ
