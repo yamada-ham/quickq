@@ -63,7 +63,9 @@ clear: both;
 }
 
 #wrap{
-
+}
+.min100vh{
+  min-height: calc(100vh - 22px);
 }
 
 header{
@@ -438,6 +440,11 @@ div.answerBox div.inAnswerBox{
 
 }
 
+div.answerBox div.inAnswerBox div.isAnswered {
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 div.parmanentQuestBox{
   margin-bottom: 50px;

@@ -25,13 +25,13 @@ $resultChoices = $app->getValues()->resultChoices;
 
 </head>
 <body>
-<div id="wrap">
+<div id="wrap" class="min100vh">
 <?php require_once(PARTS_PASS .'headerPart2.php') ?>
   <div class="answerBox">
     <div class="inAnswerBox">
 
   <?php if($app->checkAnswer($_GET['code'])): ?>
-    <p>回答ありがとうございました。二度目の回答はできません</p>
+    <div class="isAnswered"><p>回答ありがとうございました。二度目の回答はできません</p></div>
     <div class="chartBox">
     <div class="inChartBox">
       <h3>投票結果</h3>
@@ -108,7 +108,8 @@ $resultChoices = $app->getValues()->resultChoices;
 <?php endif; ?>
 </div>
 </div>
-</div>
+</div><!-- #wrap -->
+  <?php require_once(PARTS_PASS .'footerPart.php') ?>
 <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>

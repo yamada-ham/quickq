@@ -17,7 +17,7 @@ $currentPage = isset($_GET['page'])?(int)$_GET['page']:1;
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
-<div id="wrap">
+<div id="wrap" class="min100vh">
 <?php require_once(PARTS_PASS .'headerPart.php') ?>
 <div class="theCategoryBox">
   <div class="inTheCategoryBox">
@@ -65,6 +65,7 @@ $currentPage = isset($_GET['page'])?(int)$_GET['page']:1;
 </div>
 
 </div><!-- div#wrap -->
+  <?php require_once(PARTS_PASS .'footerPart.php') ?>
 <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
