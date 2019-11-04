@@ -13,8 +13,12 @@ class QuestAnswer extends \MyApp\Controller {
 
      if($_SERVER['REQUEST_METHOD']==='POST'){
           $this->postProcess();
+          // セッションに保存しておいたトークンの削除
+          unset($_SESSION['token']);
+          // セッションの保存
+          session_write_close();
       }
-    $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
+      $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
   }
 
   private function postProcess(){
@@ -45,7 +49,8 @@ class QuestAnswer extends \MyApp\Controller {
 
   private function _validate(){
     if(!isset($_SESSION['token'])||!isset($_POST['token'])||$_SESSION['token']!==$_POST['token']){
-      echo "invalid token!";
+      // echo "invalid token!";
+      header('Location:'.SITE_URL.'/questAnswer.php?'.$_SERVER['QUERY_STRING']);
       exit;
     }
     if(!isset($_GET['code'])||empty($_GET['code'])){
