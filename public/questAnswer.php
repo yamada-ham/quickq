@@ -5,10 +5,11 @@ if(!isset($_GET['code'])||empty($_GET['code'])){
   exit;
 }
 $app = new MyApp\Controller\QuestAnswer();
-$app->run($_GET['code']);
+$app->run(h($_GET['code']));
 $data = $app->getValues()->quest;
 
 $choicesList = explode(',',$data->choicesList);
+
 $resultChoices = $app->getValues()->resultChoices;
 ?>
 
@@ -22,19 +23,19 @@ $resultChoices = $app->getValues()->resultChoices;
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" ></script>
-
+<script type="text/javascript" src="scripts/chartjs-plugin-labels.js"></script>
 </head>
 <body>
-<div id="wrap" class="min100vh">
+<div id="wrap">
 <?php require_once(PARTS_PASS .'headerPart2.php') ?>
   <div class="answerBox">
     <div class="inAnswerBox">
 
   <?php if($app->checkAnswer($_GET['code'])): ?>
-    <div class="isAnswered"><p>回答ありがとうございました。二度目の回答はできません</p></div>
+    <p>回答ありがとうございました。二度目の回答はできません</p>
     <div class="chartBox">
     <div class="inChartBox">
-      <h3>投票結果</h3>
+      <h3>総合結果</h3>
       <canvas id="myChartPie" style="position: relative; height:60vh; width:100vw;"></canvas>
     </div>
     </div>
@@ -108,8 +109,7 @@ $resultChoices = $app->getValues()->resultChoices;
 <?php endif; ?>
 </div>
 </div>
-</div><!-- #wrap -->
-  <?php require_once(PARTS_PASS .'footerPart.php') ?>
+</div>
 <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>

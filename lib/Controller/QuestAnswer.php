@@ -8,14 +8,13 @@ class QuestAnswer extends \MyApp\Controller {
   public function run($code) {
     $this->_questModel = new \MyApp\Model\QuestAnswerModel();
 
-      $this->_questModel->checkGetCode();
-    $this->setValues('quest',$this->_questModel->find());
-
-      $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
+      $this->_questModel->checkGetCode($code);
+    $this->setValues('quest',$this->_questModel->find($code));
 
      if($_SERVER['REQUEST_METHOD']==='POST'){
           $this->postProcess();
       }
+    $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
   }
 
   private function postProcess(){
