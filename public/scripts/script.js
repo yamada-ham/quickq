@@ -16,7 +16,6 @@ $(function(){
   if($(".childInCreateCategoryBox") != null){
     createCategory();
   }
-
 });
 
 function createCategory(){

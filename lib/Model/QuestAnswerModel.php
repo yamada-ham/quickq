@@ -56,4 +56,27 @@ class QuestAnswerModel extends \MyApp\Model{
       return true;
     }
   }
+
+  public function findResultChoices($code){
+    //選択肢を取得
+    $sql = sprintf('select choicesList,numberOfResponses from quests where code = "%s"',$code);
+    $stmt=$this->db->query($sql);
+    $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
+    $result= $stmt->fetch();
+    $choicesListText = $result->choicesList;
+    $choicesListArray = explode(',',$choicesListText);
+
+    $numberOfResponses = $result->numberOfResponses;
+
+    foreach($choicesListArray as $choice){
+      $sql = sprintf('select count(choice) from answers where code = "%s" AND choice = "%s"',$code,$choice);
+      $stmt = $this->db->query($sql);
+      $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
+       $votes[] =  $stmt->fetchColumn();
+    }
+    return [
+      json_encode($choicesListArray),
+      json_encode($votes),
+    ];
+  }
 }

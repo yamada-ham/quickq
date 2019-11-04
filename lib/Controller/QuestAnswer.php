@@ -5,11 +5,13 @@ namespace MyApp\Controller;
 class QuestAnswer extends \MyApp\Controller {
   private $_questModel;
 
-  public function run() {
+  public function run($code) {
     $this->_questModel = new \MyApp\Model\QuestAnswerModel();
 
       $this->_questModel->checkGetCode();
     $this->setValues('quest',$this->_questModel->find());
+
+      $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
 
      if($_SERVER['REQUEST_METHOD']==='POST'){
           $this->postProcess();

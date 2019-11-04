@@ -5,11 +5,11 @@ if(!isset($_GET['code'])||empty($_GET['code'])){
   exit;
 }
 $app = new MyApp\Controller\QuestAnswer();
-$app->run();
+$app->run($_GET['code']);
 $data = $app->getValues()->quest;
 
 $choicesList = explode(',',$data->choicesList);
-
+$resultChoices = $app->getValues()->resultChoices;
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,8 @@ $choicesList = explode(',',$data->choicesList);
 <link rel="stylesheet" href="styles/style.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" ></script>
+
 </head>
 <body>
 <div id="wrap">
@@ -30,6 +32,38 @@ $choicesList = explode(',',$data->choicesList);
 
   <?php if($app->checkAnswer($_GET['code'])): ?>
     <p>回答ありがとうございました。二度目の回答はできません</p>
+    <div class="chartBox">
+    <div class="inChartBox">
+      <h3>投票結果</h3>
+      <canvas id="myChartPie" style="position: relative; height:60vh; width:100vw;"></canvas>
+    </div>
+    </div>
+    <script>
+
+    let colors = ['red','blue','yellow','green','pink','brown','orange','purple','black','gray'];
+
+    var ctx = document.getElementById("myChartPie").getContext('2d');
+      var myChartPie = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: JSON.parse('<?= $resultChoices[0]; ?>'),
+          datasets: [{
+            backgroundColor: colors,
+            data: JSON.parse('<?= $resultChoices[1]; ?>')
+          }]
+        },
+        options: {
+            plugins: {
+              labels: {
+                position:'outside',
+                showActualPercentages: true,
+                outsidePadding: 4,
+                textMargin: 4
+            }
+          }
+        }
+      });
+    </script>
   <?php else: ?>
 <form action="" method="post">
   <input type="hidden" name="questTitle" value="<?= h($data->questTitle);?>">
