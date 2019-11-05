@@ -32,13 +32,14 @@ $resultChoices = $app->getValues()->resultChoices;
     <div class="inAnswerBox">
 
   <?php if($app->checkAnswer($_GET['code'])): ?>
-    <p>回答ありがとうございました。二度目の回答はできません</p>
+    <div class="isAnswered"><p>回答ありがとうございました。二度目の回答はできません</p></div>
     <div class="chartBox">
     <div class="inChartBox">
       <h3>総合結果</h3>
       <canvas id="myChartPie" style="position: relative; height:60vh; width:100vw;"></canvas>
     </div>
     </div>
+    <div class="linkTopCase"><p><a href="<?=SITE_URL?>">トップへ</a></p></div>
     <script>
 
     let colors = ['red','blue','yellow','green','pink','brown','orange','purple','black','gray'];
