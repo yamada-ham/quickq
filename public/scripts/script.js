@@ -76,6 +76,9 @@ function choiceInputBtn(){
   let $hiddenChoice = document.getElementById('hiddenChoice');
 
   document.getElementById('addChoiceInput').addEventListener('click',function(e){
+    if($choicesList.children.length > 7){
+      return;
+    }
     let $li = document.createElement('li');
     let $clone = $hiddenChoice.cloneNode(true);
     $clone.setAttribute('type','text');
@@ -84,6 +87,9 @@ function choiceInputBtn(){
   },false);
 
   document.getElementById('removeChoiceInput').addEventListener('click',function(e){
+    if($choicesList.children.length < 3){
+      return;
+    }
     let $lastChoice = $choicesList.lastElementChild;
     $choicesList.removeChild($lastChoice);
   });

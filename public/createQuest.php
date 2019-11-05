@@ -26,7 +26,7 @@ $app->run();
       </p> -->
       <div class="questTitleBox">
         <p>1.アンケートの内容を記述してください。</p>
-        <textarea name="questTitle" class="questTitle" placeholder="例:" maxlength="200"></textarea>
+        <textarea name="questTitle" class="questTitle" placeholder="例1:カレーに豆腐を入れる。&#10例2:好きな種類の音楽は？" maxlength="200"></textarea>
       </div>
 
 
