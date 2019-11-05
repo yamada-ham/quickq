@@ -2,7 +2,7 @@
 
 namespace MyApp\Controller;
 
-class Index extends \MyApp\Controller {
+class IndexController extends \MyApp\Controller {
 
   public function run() {
     // if(!$this->isLoggedIn()){

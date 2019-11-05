@@ -4,7 +4,7 @@ if(!isset($_GET['code'])||empty($_GET['code'])){
   header('Location:'.SITE_URL);
   exit;
 }
-$app = new MyApp\Controller\QuestAnswer();
+$app = new MyApp\Controller\QuestAnswerController();
 $app->run(h($_GET['code']));
 $data = $app->getValues()->quest;
 

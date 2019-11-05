@@ -1,7 +1,7 @@
 <?php
 namespace MyApp\Model;
 
-class User extends \MyApp\Model{
+class UserModel extends \MyApp\Model{
 
   public function create($values){
     $stmt = $this->db->prepare("insert into users (email,password,userName,created,modified) values(:email,:password,:userName,now(),now())");
@@ -28,10 +28,10 @@ class User extends \MyApp\Model{
     return $user;
   }
 
-  public function findAll(){
-    $stmt = $this->db->query("select * from users order by id");
-    $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
-    return $stmt -> fetchAll();
-  }
+  // public function findAll(){
+  //   $stmt = $this->db->query("select * from users order by id");
+  //   $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
+  //   return $stmt -> fetchAll();
+  // }
 
 }

@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
-$app = new MyApp\Controller\CreateQuest();
+$app = new MyApp\Controller\CreateQuestController();
 $app->run();
 
 ?>

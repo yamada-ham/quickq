@@ -1,7 +1,7 @@
 <?php
 // ログインページ
 require_once(__DIR__ . '/../config/config.php');
-$app = new MyApp\Controller\Login();
+$app = new MyApp\Controller\LoginController();
 $app->run();
 ?>
 <!DOCTYPE html>

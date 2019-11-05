@@ -1,7 +1,7 @@
 <?php
 namespace MyApp\Controller;
 
-class Login extends \MyApp\Controller {
+class LoginController extends \MyApp\Controller {
   public function run(){
     if($this->isloggedIn()){
       header('Location:'.SITE_URL);
@@ -25,7 +25,7 @@ class Login extends \MyApp\Controller {
       return;
     }else{
       try{
-        $userModel = new \MyApp\Model\User();
+        $userModel = new \MyApp\Model\UserModel();
         $user = $userModel->login(['email'=>$_POST['email'],'password' => $_POST['password']]);
       }catch(\MyApp\Exception\UnmatchEmailOrPassword $e){
         $this->setErrors('login',$e->getMessage());

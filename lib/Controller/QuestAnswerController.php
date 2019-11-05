@@ -2,7 +2,7 @@
 
 namespace MyApp\Controller;
 
-class QuestAnswer extends \MyApp\Controller {
+class QuestAnswerController extends \MyApp\Controller {
   private $_questModel;
 
   public function run($code) {

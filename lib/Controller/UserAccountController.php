@@ -2,7 +2,7 @@
 
 namespace MyApp\Controller;
 
-class UserAccount extends \MyApp\Controller {
+class UserAccountController extends \MyApp\Controller {
 
   public function run($id) {
     if(!$this->isLoggedIn()){

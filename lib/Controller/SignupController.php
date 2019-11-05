@@ -2,7 +2,7 @@
 
 namespace MyApp\Controller;
 
-class Signup extends \MyApp\Controller {
+class SignupController extends \MyApp\Controller {
   public function run(){
     if($this->isLoggedIn()){
       header('Location:'.SITE_URL);
@@ -28,7 +28,7 @@ class Signup extends \MyApp\Controller {
       return;
     }else{
       try{
-        $userModel = new \MyApp\Model\User();
+        $userModel = new \MyApp\Model\UserModel();
         $userModel->create(['email'=>$_POST['email'],'password'=>$_POST['password'],'userName'=>$_POST['userName']]);
       }catch(\MyApp\Exception\DuplicateEmail $e){
         $this->setErrors('email',$e->getMessage());

@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
-$app = new MyApp\Controller\Index();
+$app = new MyApp\Controller\IndexController();
 $app->run();
 ?>
 
