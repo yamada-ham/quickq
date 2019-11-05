@@ -30,7 +30,7 @@ class CreateQuestController extends \MyApp\Controller {
       }
     }
 
-    header('Location:'.SITE_URL . '/questAnswer.php?code='.$code);
+    header('Location:'.SITE_URL . '/userAccount.php');
     exit;
   }
 
