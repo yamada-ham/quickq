@@ -2,14 +2,14 @@
 
 namespace MyApp\Controller;
 
-class UserAccountController extends \MyApp\Controller {
+class UserQuestsController extends \MyApp\Controller {
 
   public function run($id) {
     if(!$this->isLoggedIn()){
       header('Location:'.SITE_URL.'/login.php');
       exit;
     }
-    $questModel =  new \MyApp\Model\UserAccountModel();
+    $questModel =  new \MyApp\Model\UserQuestsModel();
     $this->setValues('userQuests',$questModel->findUserAccount($id));
   }
 

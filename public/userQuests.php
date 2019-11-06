@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
-$app = new MyApp\Controller\UserAccountController();
+$app = new MyApp\Controller\UserQuestsController();
 $app->run(h($app->me()->id));
 ?>
 
