@@ -9,7 +9,7 @@
       </div>
       <div class="loginInfoBox">
         <?php if($app->isLoggedIn()): ?>
-          <p><a href="./userQuests.php">アカウント
+          <p><a href="./userAccount.php">アカウント
         <?php else: ?>
           <p><a href="./login.php">ログイン
         <?php endif; ?>
@@ -24,7 +24,7 @@
         <?php if($app->isLoggedIn()): ?>
           <h2 class="greet">こんにちは<?= h($app->me()->userName);?>さん</h2>
           <ul>
-            <li><a href="userQuests.php">アカウント管理</a></li>
+            <li><a href="userAccount.php">アカウント管理</a></li>
             <li><a href="createQuest.php">アンケートを作成する</a></li>
             <li><form action="logout.php" method="post" id="logout">
               <p><input type="submit" value="ログアウト">

@@ -34,7 +34,7 @@ class CreateQuestModel extends \MyApp\Model{
     if($res === false){
       throw new \MyApp\Exception\CannotCreateQuest();
     }
-    return $code;
+    // return $code;
   }
 
   private function createCode(){

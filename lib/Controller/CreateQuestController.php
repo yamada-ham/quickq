@@ -23,14 +23,14 @@ class CreateQuestController extends \MyApp\Controller {
     }else{
       try{
         $questModel = new \MyApp\Model\CreateQuestModel();
-        $code = $questModel->create(['questTitle'=>$_POST['questTitle'],'choice'=>$_POST['choice'],'category'=>$_POST['category'],'userId'=>$_POST['userId']]);
+        $questModel->create(['questTitle'=>$_POST['questTitle'],'choice'=>$_POST['choice'],'category'=>$_POST['category'],'userId'=>$_POST['userId']]);
       }catch(\MyApp\Exception\CannotCreateQuest $e){
         $this->setErrors('Quest',$e->getMessage());
         return;
       }
     }
 
-    header('Location:'.SITE_URL . '/userAccount.php');
+    header('Location:'.SITE_URL . '/userQuests.php');
     exit;
   }
 
