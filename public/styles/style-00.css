@@ -1,0 +1,1149 @@
+@charset "UTF-8";
+* {
+  padding:0;
+  margin:0;
+}
+html{
+  font-size:16px;
+}
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN",YuGothic,"Yu Gothic",Verdana,Meiryo,sans-serif;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited {
+color:#000000;
+}
+
+textarea {
+  overflow: auto;
+}
+
+p,a,span{
+  word-wrap: break-word;
+  /* word-break : break-all; */
+  /* overflow: hidden; */
+}
+
+input[type="button"]{ /* 1 */
+  overflow: visible;
+  text-transform: none;
+  border-style: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+select { /* 1 */
+  text-transform: none;
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+.clear:after{
+content: "";
+display: block;
+clear: both;
+}
+
+.hidden{
+  display:none;
+}
+
+#wrap{
+
+}
+
+header{
+  background: #05ff00;
+}
+
+/* ドロワー */
+header .drawer{
+  display: inline-block;
+  padding:6px 12px;
+  border: solid 1px #aaaaaa;
+  border-radius:5px;
+  cursor:pointer;
+  z-index:97;
+  background:#dedede;
+  float:left;
+  margin-top:6px;
+  margin-left:8px;
+  /* margin-right:px; */
+}
+
+div.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  z-index:96;
+  display: none;
+}
+
+div.overlay div.btnCloseBox{
+  position: absolute;
+  left:260px;
+  top:20px;
+}
+
+.drwerMenuBox{
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  overflow: auto;
+  position: fixed;
+  z-index: 99;
+}
+nav.drwerMenuBox div.inDrwerMenuBox{
+
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox > h2.greet{
+  font-weight: bold;
+  font-size:1.3rem;
+  color:#ffffff;
+  padding:8px;
+  background: #024d2d;
+  white-space: nowrap;
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox ul{
+  margin-top:6px;
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox ul li{
+  margin-left:  10px;
+  margin-right:10px;
+  font-size:1.1rem;
+  margin-bottom:14px;
+}
+
+
+nav.drwerMenuBox div.inDrwerMenuBox ul li a:hover{
+  color:#2bff00;
+  text-decoration: underline;
+}
+nav.drwerMenuBox div.inDrwerMenuBox ul li.login{
+  border-radius : 5%;
+  font-size : 1rem;
+  text-align: center;
+  cursor : pointer;
+  padding:4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color : #000000;
+  margin-bottom: 30px;
+}
+nav.drwerMenuBox div.inDrwerMenuBox ul li.signup{
+  text-decoration: none;
+  color:#000000;
+  text-align: center;
+  background: #e7e9ec;
+  border:solid #a2a6ac 1px;
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox li form input {
+  font-size:1rem;
+}
+
+header div.inTitleBox > h1{
+  width:40%;
+  padding-left:5px;
+  float:left;
+}
+
+header div.inTitleBox > h1 a{
+  position: relative;
+  margin-left:14px;
+  display:inline-block;
+  color:#ffffff;
+  font-size:2.4rem;
+  text-decoration: none;
+}
+
+header div.loginInfoBox{
+  position: relative;
+  top:10px;
+  right:8px;
+  float:right;
+}
+
+div.loginInfoBox > p > a{
+  font-size:1.1rem;
+  color:#ffffff;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+div.topImgBox{
+  margin-bottom:8px;
+}
+div.topImgBox div.inTopImgBox{
+  background: url("../image/quickq_top2.jpg");
+  width:100%;
+  height:500px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+div.topImgBox div.inTopImgBox img{
+  width:100%;
+  position: absolute;
+  top:50%;
+  transform: translate(0%,-50%);
+}
+
+div.newListBox div.inNewListBox{
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom:10px;
+  border:solid rgb(255, 209, 171) 6px;
+  border-radius: 20px;
+}
+
+div.newListBox h2{
+  display:inline-block;
+  position: relative;
+  background: #a6d3c8;
+  color: black;
+  padding:4px 8px;
+  margin-top:4px;
+  margin-bottom:14px;
+  margin-left:4px;
+}
+
+div.newListBox h2:before{
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 9px transparent;
+  border-right: solid 15px rgb(149, 158, 155);
+}
+
+div.newListBox div.inNewListBox ul{
+  margin:2px 8px;
+}
+
+div.newListBox div.inNewListBox ul > li{
+  border-bottom:solid 1px #d0d0d0;
+  margin-bottom:6px;
+}
+
+div.newListBox div.inNewListBox ul > li a{
+  display: block;
+  text-decoration: none;
+  color:#0e00aa;
+}
+
+
+div.inContentsBox{
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+div.inContentsBox > h2{
+  text-align: center;
+  padding:20px 0px;
+  font-size:1.8rem
+}
+
+div.inContentsBox > hr{
+  margin-bottom:20px;
+}
+
+div.inputTextBox{
+  margin-bottom:20px;
+}
+
+div.inputTextBox >label{
+  display:block;
+  margin-bottom:4px;
+}
+
+div.inputTextBox input[type='text'] {
+  font-size:1rem;
+	box-sizing: border-box;
+	padding: 5px;
+  width:100%;
+	letter-spacing: 1px;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+p.typeText input[type='text']:focus {
+  border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+div.inputTextBox input[type='password'] {
+  font-size:1rem;
+	box-sizing: border-box;
+	padding: 5px;
+  width:100%;
+	letter-spacing: 1px;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+p.typeText input[type='password']:focus {
+  border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+p.errBox{
+  color:#ff0000;
+  padding-bottom: 4px;
+}
+
+div.submitBox input[type=submit] {
+  display : inline-block;
+  border-radius : 5%;
+  font-size : 1rem;
+  text-align: center;
+  cursor : pointer;
+  padding:4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color : #000000;
+  opacity : 0.9;
+  margin-bottom: 30px;
+  width:100%;
+
+}
+div.submitBox input[type=submit]:hover {
+  opacity: 1;
+}
+
+
+p.inSignupBox a {
+  display: inline-block;
+  text-decoration: none;
+  color:#000000;
+  text-align: center;
+  padding:4px 0;
+  background: #e7e9ec;
+  border:solid #a2a6ac 1px;
+  width:100%;
+}
+
+p.inSignupBox a {
+    background-image:-moz-linear-gradient(top,#e7e9ec 0%,#cbcdd1);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#e7e9ec),
+    to( #cbcdd1));
+}
+
+div.createBox{
+  position:fixed;
+  bottom:10px;
+  right:12px;
+}
+.createBox p a{
+  display:inline-block;
+  text-decoration: none;
+  font-size: 3.4rem;
+  background: #4aff00;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 44px;
+}
+
+
+
+
+/* カテゴリー アコーディオン */
+.accordion_ul li{
+    position:relative;
+}
+.accordion_ul li:before{
+
+}
+div.categoryBox section h1{
+    background-color: #69b633;
+    border-bottom: solid 1px #59ffdc;
+    margin-bottom: 1px;
+    padding: 10px;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+}
+div.categoryBox section h1:before,
+dt:before {
+  display: block;
+  content: "+";
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  transform-origin: 50% 58%;
+  transition:0.3s;
+}
+div.categoryBox section h1.rotate225:before{
+transform: rotate(180deg);
+color:black;
+content: "-";
+}
+
+div.categoryBox section li{
+    background-color: #ffffff;
+    border-bottom: solid 1px #D6D6D6;
+    padding: 8px 0 8px 24px;
+}
+
+div.categoryBox section li a {
+    position: relative;
+    color:black;
+    display: block;
+    padding:2px 4px;
+}
+/* ↑カテゴリー */
+
+
+/* questAnswer.php アンケート回答 */
+div.answerBox{
+  margin-top:30px;
+}
+
+
+div.answerBox div.inAnswerBox{
+
+}
+
+div.answerBox div.inAnswerBox div.isAnswered{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.answerBox div.inAnswerBox div.linkTopCase{
+  margin-top:20px;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.answerBox div.inAnswerBox div.linkTopCase a{
+  text-decoration:underline;
+}
+
+div.parmanentQuestBox{
+  margin-bottom: 50px;
+}
+div.parmanentQuestBox p{
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:4px;
+}
+
+.ageSelectBox {
+	overflow: hidden;
+	width:30%;
+  float:left;
+  margin-left:10%;
+  margin-right: 0%;
+	text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.ageSelectBox select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.ageSelectBox select::-ms-expand {
+    display: none;
+}
+.ageSelectBox::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.ageSelectBox select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+  display: block;
+}
+
+.sexBox{
+  float:left;
+  width:47%;
+  margin-left: 3%;
+  margin-right: 10%;
+}
+
+.sexBox input {
+	display: none;
+}
+.sexBox label{
+	display: block;
+	float: left;
+	cursor: pointer;
+  box-sizing: border-box;
+	width: 50%;
+	margin: 0;
+	padding: 10px;
+	background: #bdc3c7;
+	color: #4f565b;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+.sexBox label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+.sexBox label:last-of-type{
+	border-radius: 0 3px 3px 0;
+}
+.sexBox input[type="radio"]:checked + .man {
+	background-color: #a1b91d;
+	color: #fff;
+}
+.sexBox input[type="radio"]:checked + .woman {
+	background-color: #e67168;
+	color: #fff;
+}
+
+.answerRadioBox{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+div.answerRadioBox ul.inAnswerRadioBox {
+  background:#eef0d7;
+  padding:10px 20px;
+  border-radius: 8px;
+	margin-bottom:36px;
+}
+
+div.answerRadioBox p{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:4px;
+}
+
+div.answerRadioBox ul.inAnswerRadioBox  > li{
+  margin-bottom:10px;
+}
+
+@keyframes click-wave {
+	0% {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		opacity: 0.35;
+	}
+	100% {
+		width: 200px;
+		height: 200px;
+		margin-top: -80px;
+		margin-left: -80px;
+		opacity: 0;
+	}
+}
+.inAnswerRadioBox .answerRadio {
+	position: relative;
+	top: 10px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	transition: all 0.15s ease-out 0s;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	background: #d7cbcb;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+.inAnswerRadioBox .answerRadio:hover {
+	background: #d6a9a9;
+}
+
+.inAnswerRadioBox .answerRadio + label:hover  {
+	background: #d6a9a9;
+}
+
+.inAnswerRadioBox .answerRadio:checked {
+	background: #da3c41;
+}
+.inAnswerRadioBox .answerRadio:checked::before {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '';
+	text-align: center;
+}
+.inAnswerRadioBox .answerRadio:checked::after {
+	position: relative;
+	display: block;
+	content: '';
+	-webkit-animation: click-wave 0.65s;
+	        animation: click-wave 0.65s;
+	background: #da3c41;
+}
+.inAnswerRadioBox .answerRadio.radio {
+	border-radius: 50%;
+}
+.inAnswerRadioBox .answerRadio.radio::after {
+	border-radius: 50%;
+}
+.inAnswerRadioBox label {
+	/* line-height: 40px; */
+	display: inline-block;
+  width:80%;
+  padding:4px 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div.errAnswerBox{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.errAnswerBox p{
+  color:#ff002e;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.answerSubmitBox{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.answerSubmitBox input[type="submit"]{
+  display : inline-block;
+  border-radius : 5%;
+  font-size : 1rem;
+  text-align: center;
+  cursor : pointer;
+  padding:4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color : #000000;
+  opacity : 1;
+  margin-bottom: 30px;
+  width:100%;
+}
+
+/* ↑questAnswer.php アンケート回答 */
+
+/* createQuest.php アンケートの作成 */
+.createQuestBox{
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.createQuestBox .inCreateQuestBox .questTitle{
+      border: 2px solid #787878;  /* 枠線 */
+      border-radius: 0.67em;   /* 角丸 */
+      padding: 4px;          /* 内側の余白量 */
+      background-color: snow;  /* 背景色 */
+      width: 100%;             /* 横幅いっぱいにする */
+      box-sizing: border-box;  /* ※これがないと横にはみ出る */
+      height: 150px;           /* 高さ */
+      font-size: 1rem;          /* 文字サイズ */
+
+}
+
+.createQuestBox .inCreateQuestBox .questTitle:focus {
+    border-color: #00abff;
+    background-color: #ffffdf;
+    outline: none;
+}
+
+.createQuestBox .inCreateQuestBox div.questTitleBox{
+  margin-top:20px;
+  margin-bottom: 40px;
+}
+
+.createQuestBox .inCreateQuestBox div.questTitleBox > p{
+  margin-bottom:4px;
+}
+
+div.choicesListBox{
+  margin-bottom:30px;
+}
+
+div.choicesListBox > p{
+  margin-bottom:4px;
+}
+
+div.choicesListBox div.addRemoveChoiceBox{
+  float:right;
+}
+
+div.choicesListBox div.addRemoveChoiceBox label {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #b5b5b5;
+}
+div.choicesListBox div.addRemoveChoiceBox label input {
+  /* line-height: 80px; */
+  font-size:2.2rem;
+}
+div.choicesListBox div.addRemoveChoiceBox label:active {
+  /*押したとき*/
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+div.choicesListBox ul#choicesList li{
+  margin-bottom:14px;
+}
+
+div.choicesListBox ul#choicesList input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border:none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.4em 0.8em;
+  width: 100%;
+  box-sizing: border-box
+}
+
+div.choicesListBox ul#choicesList input:focus {
+  background-color: #ffffdf;
+  outline: none;
+}
+
+div.choicesListBox ul#choicesList input:focus:after {
+  border-color: #00abff;
+}
+
+div.choicesListBox ul#choicesList li:after{
+	display: block;
+	height: 4px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+}
+
+
+.createCategoryBox {
+  margin-bottom:30px;
+}
+.createCategoryBox select {
+	width: 100%;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.createCategoryBox select::-ms-expand {
+    display: none;
+}
+.createCategoryBox .parentInCreateCategoryBox, .createCategoryBox .childInCreateCategoryBox{
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+  margin-bottom:8px;
+}
+
+.createCategoryBox .parentInCreateCategoryBox::before, .createCategoryBox .childInCreateCategoryBox::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.createCategoryBox select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+  display: block;
+}
+
+div.errCreateQuestBox{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.errCreateQuestBox p{
+  color:#ff002e;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.createQuestSubmitBox{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.createQuestSubmitBox input[type="submit"]{
+  display : inline-block;
+  border-radius : 5%;
+  font-size : 1rem;
+  text-align: center;
+  cursor : pointer;
+  padding:4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color : #000000;
+  opacity : 1;
+  margin-bottom: 30px;
+  width:100%;
+}
+
+/*  ↑createQuest.php アンケートの作成 */
+
+/* category.php その種類のカテゴリーの一覧 */
+div.theCategoryBox{
+  width:90%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+div.theCategoryBox ul{
+  padding: 0;
+  position: relative;
+}
+
+div.theCategoryBox ul li{
+  border-bottom: 1px solid #d9d9d9;
+}
+
+div.theCategoryBox ul li a {
+  display: block;
+  font-size:1.1rem;
+  color:#0000ee;
+}
+div.theCategoryBox ul li a:hover {
+  text-decoration: underline;
+}
+
+div.theCategoryBox ul li a:visited {
+  color:#0000ee;
+}
+
+div.theCategoryBox ul li div.categoryQuestData img.answerNumIcon{
+  width:18px;
+}
+div.theCategoryBox ul li div.categoryQuestData span{
+vertical-align: 4px;
+}
+
+ul.pagination {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+ul.pagination li {
+  /* display: inline; */
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    margin-right:2px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    box-sizing:border-box;
+}
+
+
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+.paginationBox{
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.paginationBox ul.pagination li a.pageTop,div.paginationBox ul.pagination li a.pageEnd{
+  padding: 8px 12px;
+}
+
+/* ↑category.php その種類のカテゴリーの一覧 */
+
+/* ユーザーアカウントページ  userAccount.php*/
+
+div.accountInfoBox div.accountBarBox{
+  background: #250070;
+}
+div.accountInfoBox div.accountBarBox p{
+  font-size:0.9rem;
+  padding:4px 8px;
+  color:#ffffff;
+}
+
+div.createdQuestHistoryBox{
+  width:96%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox h3{
+  margin-top:10px;
+  margin-bottom: 12px;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li{
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #c9c9c9;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li > div.questHistoryInfo{
+  font-size:0.8rem;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li > div.questHistoryInfo p{
+  float:left;
+  padding:2px;
+  box-sizing: border-box;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryInfo p.answerNum img.answerNumIcon{
+  position:relative;
+  top:3px;
+  margin-right:4px;
+  display:inline-block;
+  width:14px;
+}
+
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTitle p a{
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+  color:#0000ee;
+  display:block;
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTitle p a:hover{
+  background:rgba(200, 200, 200, 0.2);
+}
+
+div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTitle p a:hover{
+    color:#00ff2f;
+    text-decoration: underline;
+}
+
+/* ↑ユーザーアカウントページ  userAccount.php*/
+canvas{
+  style="position: relative;
+  width:80vw;
+  height:50vh"
+}
+/*データ分析ページ questAnalysis.php*/
+div.chartBox{
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-bottom:solid 4px #77fbd5;
+}
+
+div.chartBox div.inChartBox h3{
+  text-align:center;
+  font-size:1.6rem;
+}
+
+
+/*↑データ分析ページ questAnalysis.php*/
+
+/*アカウント情報変更ページ accountInfoChange.php*/
+div.changeFormBox {
+	position: relative;
+	width: 80%;
+  margin-left: auto;
+	margin-right: auto;
+}
+
+div.changeFormBox div.inChangeFormBox h2{
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+div.changeFormBox label{
+  display:block;
+  margin-bottom:4px;
+}
+
+div.changeFormBox input[type=text] {
+  font-size:1rem;
+  box-sizing: border-box;
+  padding: 10px;
+  width:100%;
+  letter-spacing: 1px;
+  border: 1px solid #1b2538;
+  border-radius: 4px;
+  margin-bottom:20px;
+}
+div.changeFormBox input[type=text]:focus {
+  border: 1px solid #da3c41;
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+div.changeFormBox i {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	padding: 9px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+div.changeFormBox input[type=text]:focus + i {
+	color: #da3c41;
+}
+
+div.changeFormBox div.inChangeFormBox input[type=submit] {
+  display : inline-block;
+  border-radius : 5%;
+  font-size : 1rem;
+  text-align: center;
+  cursor : pointer;
+  padding:4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color : #000000;
+  opacity : 0.9;
+  margin-bottom: 30px;
+  width:100%;
+
+}
+div.changeFormBox div.inChangeFormBox input[type=submit]:hover {
+  opacity: 1;
+}
+
+div.changeFormBox div.inChangeFormBox div.cancel a{
+  display: block;
+  text-decoration:underline;
+  color:#0e00aa;
+  text-align: right;
+}
+
+/*↑アカウント情報変更ページ accountInfoChange.php*/
+
+/*footerPart.php*/
+footer{
+  background:#000000;
+}
+footer div.inFooterBox {
+  padding-top:4px;
+  padding-bottom:4px;
+}
+footer div.inFooterBox p {
+  text-align: center;
+  color:#fff;
+}
+/*↑footerPart.php*/
+
+@media screen and (min-width: 769px) {
+div.newListBox{
+  width:74%;
+  margin-left:auto;
+  margin-right:auto;
+}
+div.categoryBox{
+  width:74%;
+  margin-left:auto;
+  margin-right:auto;
+}
+}

@@ -1,0 +1,101 @@
+div.contentsBox{
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  div.inContentsBox{
+    h2{
+      text-align: center;
+      padding:20px 0px;
+      font-size:1.8rem
+    }
+    hr{
+      margin-bottom:20px;
+    }
+    form{
+      div.inputTextBox{
+        margin-bottom:20px;
+        label{
+          display:block;
+          margin-bottom:4px;
+        }
+        input{
+          &[type='text']{
+            font-size:1rem;
+            box-sizing: border-box;
+            padding: 5px;
+            width:100%;
+            letter-spacing: 1px;
+            border: 1px solid #1b2538;
+            border-radius: 4px;
+            &:focus{
+              border: 1px solid #da3c41;
+              outline: none;
+              box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+            }
+          }
+          &[type='password']{
+            font-size:1rem;
+            box-sizing: border-box;
+            padding: 5px;
+            width:100%;
+            letter-spacing: 1px;
+            border: 1px solid #1b2538;
+            border-radius: 4px;
+            &:focus{
+              border: 1px solid #da3c41;
+              outline: none;
+              box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+            }
+          }
+        }
+      }
+    }
+    p.errBox{
+      color:#ff0000;
+      padding-bottom: 4px;
+    }
+    div.submitBox{
+      p.inSubmitBox{
+        input{
+          &[type="submit"]{
+            display : inline-block;
+            border-radius : 5%;
+            font-size : 1rem;
+            text-align: center;
+            cursor : pointer;
+            padding:4px 0;
+            border-bottom: solid 2px #d27d00;
+            background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+            box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+            color : #000000;
+            opacity : 0.9;
+            margin-bottom: 30px;
+            width:100%;
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    div.signupBox{
+      p.inSignupBox{
+        a{
+          display: inline-block;
+          text-decoration: none;
+          color:#000000;
+          text-align: center;
+          padding:4px 0;
+          background: #e7e9ec;
+          border:solid #a2a6ac 1px;
+          width:100%;
+          background-image:-moz-linear-gradient(top,#e7e9ec 0%,#cbcdd1);
+          background-image:-webkit-gradient(
+          linear,left top,left bottom,
+          from(#e7e9ec),
+          to( #cbcdd1));
+        }
+      }
+    }
+  }
+}

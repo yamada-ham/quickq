@@ -1,0 +1,108 @@
+div.topImgBox{
+  margin-bottom:8px;
+  div.inTopImgBox{
+    background: url("../image/quickq_top2.jpg");
+    width:100%;
+    height:500px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    img{
+      width:100%;
+      position: absolute;
+      top:50%;
+      transform: translate(0%,-50%);
+    }
+  }
+}
+
+div.newListBox{
+  div.inNewListBox{
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom:10px;
+    border:solid rgb(255, 209, 171) 6px;
+    border-radius: 20px;
+    div{
+      h2{
+        display:inline-block;
+        position: relative;
+        background: #a6d3c8;
+        color: black;
+        padding:4px 8px;
+        margin-top:4px;
+        margin-bottom:14px;
+        margin-left:4px;
+        &:before{
+          position: absolute;
+          content: '';
+          top: 100%;
+          left: 0;
+          border: none;
+          border-bottom: solid 9px transparent;
+          border-right: solid 15px rgb(149, 158, 155);
+        }
+      }
+    }
+    ul{
+      margin:2px 8px;
+      li{
+        border-bottom:solid 1px #d0d0d0;
+        margin-bottom:6px;
+        a{
+          display: block;
+          text-decoration: none;
+          color:#0e00aa;
+        }
+      }
+    }
+  }
+}
+
+div.categoryBox{
+  div.inCategoryBox{
+    ul.accordion_ul{
+      li{
+        position:relative;
+        section{
+          h1{
+            background-color: #69b633;
+            border-bottom: solid 1px #59ffdc;
+            margin-bottom: 1px;
+            padding: 10px;
+            color: #FFF;
+            cursor: pointer;
+            position: relative;
+            &:before{
+              display: block;
+              content: "+";
+              font-weight: bold;
+              position: absolute;
+              right: 15px;
+              transform-origin: 50% 58%;
+              transition:0.3s;
+            }
+            &.rotate225:before{
+              transform: rotate(180deg);
+              color:black;
+              content: "-";
+            }
+          }
+          ul{
+            li{
+              background-color: #ffffff;
+              border-bottom: solid 1px #D6D6D6;
+              padding: 8px 0 8px 24px;
+              a{
+                position: relative;
+                color:black;
+                display: block;
+                padding:2px 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
