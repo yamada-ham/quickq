@@ -1,0 +1,85 @@
+div.answerBox{
+  margin-top:30px;
+  div.inAnswerBox{
+    div.isAnswered{
+      width:80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    div.chartBox{
+      div.inChartBox{
+        h3{}
+        canvas{}
+      }
+    }
+    div.linkTopCase{
+      margin-top:20px;
+      width:80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      p{
+        a{
+          text-decoration:underline;
+
+        }
+      }
+    }
+    form{
+      div.parmanentQuestBox{
+        margin-bottom: 50px;
+        p{
+          width:80%;
+          margin-left:auto;
+          margin-right:auto;
+          margin-bottom:4px;
+        }
+        div.ageSelectBox{
+          overflow: hidden;
+          width:30%;
+          float:left;
+          margin-left:10%;
+          margin-right: 0%;
+          text-align: center;
+          box-sizing: border-box;
+          position: relative;
+          border: 1px solid #bbbbbb;
+          border-radius: 2px;
+          background: #ffffff;
+          &:before{
+            position: absolute;
+            top: 0.8em;
+            right: 0.9em;
+            width: 0;
+            height: 0;
+            padding: 0;
+            content: '';
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #666666;
+            pointer-events: none;
+          }
+          select{
+            width: 100%;
+            padding: 8px 38px 8px 8px;
+            color: #666666;
+            display: block;
+            cursor: pointer;
+            text-indent: 0.01px;
+            text-overflow: ellipsis;
+            border: none;
+            outline: none;
+            background: transparent;
+            background-image: none;
+            box-shadow: none;
+            -webkit-appearance: none;
+            appearance: none;
+            &:-ms-expand{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
