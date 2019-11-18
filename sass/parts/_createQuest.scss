@@ -1,0 +1,220 @@
+div.createQuestBox{
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  div.inCreateQuestBox{
+    form{
+
+    }
+    div.questTitleBox{
+      margin-top:20px;
+      margin-bottom: 40px;
+      p{
+        margin-bottom:4px;
+      }
+      textarea.questTitle{
+        border: 2px solid #787878;
+        border-radius: 0.67em;
+        padding: 4px;
+        background-color: snow;
+        width: 100%;
+        box-sizing: border-box;
+        height: 150px;
+        font-size: 1rem;
+        &:focus{
+          border-color: #00abff;
+          background-color: #ffffdf;
+          outline: none;
+        }
+      }
+    }
+    div.choicesListBox{
+      margin-bottom:30px;
+      p{
+        margin-bottom:4px;
+      }
+      ul#choicesList{
+        margin-bottom:14px;
+        li{
+          margin-bottom:14px;
+          &:after{
+            display: block;
+            height: 4px;
+            content: '';
+            border-width: 0 1px 1px 1px;
+            border-style: solid;
+          }
+          input{
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            background-image: none;
+            border:none;
+            border-radius: 0;
+            color: inherit;
+            font-family: inherit;
+            font-size: 1em;
+            padding: 0.4em 0.8em;
+            width: 100%;
+            box-sizing: border-box;
+            &:focus{
+              background-color: #ffffdf;
+              outline: none;
+              &:focus:after{
+                border-color: #00abff;
+              }
+            }
+          }
+        }
+      }
+      div.addRemoveChoiceBox{
+        float:right;
+        label{
+          display: inline-block;
+          text-decoration: none;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 40px;
+          border-radius: 50%;
+          text-align: center;
+          overflow: hidden;
+          font-weight: bold;
+          background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+          text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+          box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+          border-bottom: solid 2px #b5b5b5;
+          &:active{
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+            border-bottom: none;
+          }
+          input[type="button"]{
+            font-size:2.2rem;
+          }
+        }
+      }
+    }
+    div.createCategoryBox{
+      margin-bottom:30px;
+      p{
+
+      }
+      div.parentInCreateCategoryBox{
+        position: relative;
+        border: 1px solid #bbbbbb;
+        border-radius: 2px;
+        background: #ffffff;
+        margin-bottom:8px;
+        &:before{
+          position: absolute;
+          top: 0.8em;
+          right: 0.9em;
+          width: 0;
+          height: 0;
+          padding: 0;
+          content: '';
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid #666666;
+          pointer-events: none;
+        }
+        select.parentCategory{
+          width: 100%;
+          padding: 8px 38px 8px 8px;
+          color: #666666;
+          display: block;
+          cursor: pointer;
+          text-indent: 0.01px;
+          text-overflow: ellipsis;
+          border: none;
+          outline: none;
+          background: transparent;
+          background-image: none;
+          box-shadow: none;
+          -webkit-appearance: none;
+          appearance: none;
+          
+          &:-ms-expand{
+            display: none;
+          }
+          option{
+
+          }
+        }
+      }
+      div.childInCreateCategoryBox{
+        position: relative;
+        border: 1px solid #bbbbbb;
+        border-radius: 2px;
+        background: #ffffff;
+        margin-bottom:8px;
+        &:before{
+          position: absolute;
+          top: 0.8em;
+          right: 0.9em;
+          width: 0;
+          height: 0;
+          padding: 0;
+          content: '';
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid #666666;
+          pointer-events: none;
+        }
+        select.childCategory{
+          width: 100%;
+          padding: 8px 38px 8px 8px;
+          color: #666666;
+          display: block;
+          cursor: pointer;
+          text-indent: 0.01px;
+          text-overflow: ellipsis;
+          border: none;
+          outline: none;
+          background: transparent;
+          background-image: none;
+          box-shadow: none;
+          -webkit-appearance: none;
+          appearance: none;
+          padding: 8px 38px 8px 8px;
+          color: #666666;
+          display: block;
+          option{
+
+          }
+        }
+      }
+    }
+    div.errCreateQuestBox{
+      width:100%;
+      margin-left: auto;
+      margin-right: auto;
+      p.err{
+        color:#ff002e;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+    div.createQuestSubmitBox{
+      width:70%;
+      margin-left: auto;
+      margin-right: auto;
+      input[type="submit"]{
+        display : inline-block;
+        border-radius : 5%;
+        font-size : 1rem;
+        text-align: center;
+        cursor : pointer;
+        padding:4px 0;
+        border-bottom: solid 2px #d27d00;
+        background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        color : #000000;
+        opacity : 1;
+        margin-bottom: 30px;
+        width:100%;
+      }
+    }
+  }
+}

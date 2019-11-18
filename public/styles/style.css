@@ -81,6 +81,22 @@ div.createBox p a {
   line-height: 44px;
 }
 
+@keyframes click-wave {
+  0% {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 0.35;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-top: -80px;
+    margin-left: -80px;
+    opacity: 0;
+  }
+}
+
 header {
   background: #05ff00;
 }
@@ -481,4 +497,401 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select
 
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select:-ms-expand {
   display: none;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox {
+  float: left;
+  width: 47%;
+  margin-left: 3%;
+  margin-right: 10%;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox input[type="radio"] {
+  display: none;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox input[type="radio"]:checked + .man {
+  background-color: #a1b91d;
+  color: #fff;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox input[type="radio"]:checked + .woman {
+  background-color: #e67168;
+  color: #fff;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label {
+  display: block;
+  float: left;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0;
+  padding: 10px;
+  background: #bdc3c7;
+  color: #4f565b;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1;
+  transition: .2s;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:first-of-type, div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:last-of-type {
+  border-radius: 3px 0 0 3px;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox p {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox {
+  background: #eef0d7;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 36px;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li {
+  margin-bottom: 10px;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio {
+  position: relative;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease-out 0s;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: #d7cbcb;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:after {
+  border-radius: 50%;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:hover {
+  background: #d6a9a9;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio label {
+  display: inline-block;
+  width: 80%;
+  padding: 4px 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio label:hover {
+  background: #d6a9a9;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked {
+  background: #da3c41;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked:before {
+  font-size: 20px;
+  line-height: 30px;
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  content: '';
+  text-align: center;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked:after {
+  position: relative;
+  display: block;
+  content: '';
+  -webkit-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #da3c41;
+}
+
+div.answerBox div.inAnswerBox form div.errAnswerBox {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.answerBox div.inAnswerBox form div.errAnswerBox p {
+  color: #ff002e;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.answerBox div.inAnswerBox form div.answerSubmitBox {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.answerBox div.inAnswerBox form div.answerSubmitBox input[type="submit"] {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+div.createQuestBox {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.createQuestBox div.inCreateQuestBox div.questTitleBox {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.questTitleBox p {
+  margin-bottom: 4px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.questTitleBox textarea.questTitle {
+  border: 2px solid #787878;
+  border-radius: 0.67em;
+  padding: 4px;
+  background-color: snow;
+  width: 100%;
+  box-sizing: border-box;
+  height: 150px;
+  font-size: 1rem;
+}
+
+div.createQuestBox div.inCreateQuestBox div.questTitleBox textarea.questTitle:focus {
+  border-color: #00abff;
+  background-color: #ffffdf;
+  outline: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox {
+  margin-bottom: 30px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox p {
+  margin-bottom: 4px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList {
+  margin-bottom: 14px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList li {
+  margin-bottom: 14px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList li:after {
+  display: block;
+  height: 4px;
+  content: '';
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList li input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.4em 0.8em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList li input:focus {
+  background-color: #ffffdf;
+  outline: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox ul#choicesList li input:focus:focus:after {
+  border-color: #00abff;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBox {
+  float: right;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBox label {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #b5b5b5;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBox label:active {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBox label input[type="button"] {
+  font-size: 2.2rem;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox {
+  margin-bottom: 30px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.parentInCreateCategoryBox {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+  margin-bottom: 8px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.parentInCreateCategoryBox:before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.parentInCreateCategoryBox select.parentCategory {
+  width: 100%;
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+  display: block;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.parentInCreateCategoryBox select.parentCategory:-ms-expand {
+  display: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.childInCreateCategoryBox {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+  margin-bottom: 8px;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.childInCreateCategoryBox:before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createCategoryBox div.childInCreateCategoryBox select.childCategory {
+  width: 100%;
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+  display: block;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+  display: block;
+}
+
+div.createQuestBox div.inCreateQuestBox div.errCreateQuestBox {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.createQuestBox div.inCreateQuestBox div.errCreateQuestBox p.err {
+  color: #ff002e;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox input[type="submit"] {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 30px;
+  width: 100%;
 }

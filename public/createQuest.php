@@ -36,7 +36,7 @@ $app->run();
         <p>2.アンケートの選択欄を作成してください。</p>
         <ul id="choicesList">
           <li ><input type="text" name="choice[]" value="賛成" placeholder="未入力"></li>
-          <li><input type="test" name="choice[]" value="反対" placeholder="未入力"></li>
+          <li><input type="text" name="choice[]" value="反対" placeholder="未入力"></li>
         </ul>
         <div class="addRemoveChoiceBox">
           <label><input type="button" id="addChoiceInput" value="+"></label>

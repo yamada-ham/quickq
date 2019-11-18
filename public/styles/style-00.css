@@ -686,7 +686,6 @@ div.answerSubmitBox input[type="submit"]{
   margin-bottom: 30px;
   width:100%;
 }
-
 /* ↑questAnswer.php アンケート回答 */
 
 /* createQuest.php アンケートの作成 */
@@ -724,10 +723,6 @@ div.answerSubmitBox input[type="submit"]{
 
 div.choicesListBox{
   margin-bottom:30px;
-}
-
-div.choicesListBox > p{
-  margin-bottom:4px;
 }
 
 div.choicesListBox div.addRemoveChoiceBox{
@@ -777,7 +772,7 @@ div.choicesListBox ul#choicesList input {
   font-size: 1em;
   padding: 0.4em 0.8em;
   width: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 div.choicesListBox ul#choicesList input:focus {
