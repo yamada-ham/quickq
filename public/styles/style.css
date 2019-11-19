@@ -421,10 +421,24 @@ div.answerBox {
   margin-top: 30px;
 }
 
-div.answerBox div.inAnswerBox div.isAnswered {
+div.answerBox div.inAnswerBox {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+div.answerBox div.inAnswerBox div.chartBox {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 4px #77fbd5;
+}
+
+div.answerBox div.inAnswerBox div.chartBox div.inChartBox h3 {
+  text-align: center;
+  font-size: 1.6rem;
 }
 
 div.answerBox div.inAnswerBox div.linkTopCase {
@@ -464,6 +478,28 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox {
   background: #ffffff;
 }
 
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+  display: block;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select:-ms-expand {
+  display: none;
+}
+
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox:before {
   position: absolute;
   top: 0.8em;
@@ -478,27 +514,6 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox:before
   pointer-events: none;
 }
 
-div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select {
-  width: 100%;
-  padding: 8px 38px 8px 8px;
-  color: #666666;
-  display: block;
-  cursor: pointer;
-  text-indent: 0.01px;
-  text-overflow: ellipsis;
-  border: none;
-  outline: none;
-  background: transparent;
-  background-image: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox select:-ms-expand {
-  display: none;
-}
-
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox {
   float: left;
   width: 47%;
@@ -506,7 +521,7 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox {
   margin-right: 10%;
 }
 
-div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox input[type="radio"] {
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox input {
   display: none;
 }
 
@@ -536,8 +551,12 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label {
   transition: .2s;
 }
 
-div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:first-of-type, div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:last-of-type {
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:first-of-type {
   border-radius: 3px 0 0 3px;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:last-of-type {
+  border-radius: 0 3px 3px 0;
 }
 
 div.answerBox div.inAnswerBox form div.answerRadioBox {
@@ -564,7 +583,7 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li {
   margin-bottom: 10px;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio {
   position: relative;
   top: 10px;
   right: 0;
@@ -584,31 +603,19 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li inp
   border-radius: 50%;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:after {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:after {
   border-radius: 50%;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:hover {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:hover {
   background: #d6a9a9;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio label {
-  display: inline-block;
-  width: 80%;
-  padding: 4px 10px;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio label:hover {
-  background: #d6a9a9;
-}
-
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:checked {
   background: #da3c41;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked:before {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:checked:before {
   font-size: 20px;
   line-height: 30px;
   position: absolute;
@@ -619,13 +626,25 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li inp
   text-align: center;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input[type="radio"].answerRadio:checked:after {
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:checked:after {
   position: relative;
   display: block;
   content: '';
   -webkit-animation: click-wave 0.65s;
   animation: click-wave 0.65s;
   background: #da3c41;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li label {
+  display: inline-block;
+  width: 80%;
+  padding: 4px 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li label:hover {
+  background: #d6a9a9;
 }
 
 div.answerBox div.inAnswerBox form div.errAnswerBox {

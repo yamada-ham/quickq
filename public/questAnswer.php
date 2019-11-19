@@ -94,7 +94,7 @@ $resultChoices = $app->getValues()->resultChoices;
     <p>Q.<?= h($data->questTitle); ?>(該当するものを一つお答えください)</p>
     <ul class="inAnswerRadioBox">
       <?php for($i = 0; $i < h($data->choicesNum);$i++):?>
-      <li><input type="radio" name="choice" class="answerRadio radio" id="answerRadio<?=$i?>" value="<?=$choicesList[$i]?>"><label for="answerRadio<?=$i?>" ><?=h($choicesList[$i]); ?></label></li>
+      <li><input type="radio" name="choice" class="answerRadio" id="answerRadio<?=$i?>" value="<?=$choicesList[$i]?>"><label for="answerRadio<?=$i?>" ><?=h($choicesList[$i]); ?></label></li>
       <?php endfor;?>
     </ul>
   </div>

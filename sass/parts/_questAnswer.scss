@@ -1,15 +1,26 @@
 div.answerBox{
   margin-top:30px;
   div.inAnswerBox{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
     div.isAnswered{
-      width:80%;
-      margin-left: auto;
-      margin-right: auto;
+      p{
+
+      }
     }
     div.chartBox{
+      width:90%;
+      margin-left:auto;
+      margin-right:auto;
+      padding-top:20px;
+      padding-bottom:20px;
+      border-bottom:solid 4px #77fbd5;
       div.inChartBox{
-        h3{}
-        canvas{}
+        h3{
+          text-align:center;
+          font-size:1.6rem;
+        }
       }
     }
     div.linkTopCase{
@@ -21,11 +32,13 @@ div.answerBox{
       p{
         a{
           text-decoration:underline;
-
         }
       }
     }
     form{
+      input{
+
+      }
       div.parmanentQuestBox{
         margin-bottom: 50px;
         p{
@@ -46,6 +59,29 @@ div.answerBox{
           border: 1px solid #bbbbbb;
           border-radius: 2px;
           background: #ffffff;
+          select{
+            width: 100%;
+            padding-right: 1em;
+            cursor: pointer;
+            text-indent: 0.01px;
+            text-overflow: ellipsis;
+            border: none;
+            outline: none;
+            background: transparent;
+            background-image: none;
+            box-shadow: none;
+            -webkit-appearance: none;
+            appearance: none;
+            padding: 8px 38px 8px 8px;
+            color: #666666;
+            display: block;
+            &:-ms-expand{
+              display: none;
+            }
+            option{
+
+            }
+          }
           &:before{
             position: absolute;
             top: 0.8em;
@@ -59,25 +95,6 @@ div.answerBox{
             border-top: 6px solid #666666;
             pointer-events: none;
           }
-          select{
-            width: 100%;
-            padding: 8px 38px 8px 8px;
-            color: #666666;
-            display: block;
-            cursor: pointer;
-            text-indent: 0.01px;
-            text-overflow: ellipsis;
-            border: none;
-            outline: none;
-            background: transparent;
-            background-image: none;
-            box-shadow: none;
-            -webkit-appearance: none;
-            appearance: none;
-            &:-ms-expand{
-              display: none;
-            }
-          }
         }
         div.sexBox{
           float:left;
@@ -85,40 +102,42 @@ div.answerBox{
           margin-left: 3%;
           margin-right: 10%;
           input{
-            &[type="radio"]{
-              display: none;
-              &:checked{
-                & + .man{
-                  background-color: #a1b91d;
-                  color: #fff;
-                }
-                & + .woman{
-                  background-color: #e67168;
-                  color: #fff;
-                }
-              }
-            }
+	           display: none;
+             &[type="radio"]:checked{
+               & + .man{
+                 background-color: #a1b91d;
+                 color: #fff;
+               }
+               & + .woman{
+                 background-color: #e67168;
+                 color: #fff;
+               }
+             }
           }
           label{
             display: block;
-            float: left;
-            cursor: pointer;
+          	float: left;
+          	cursor: pointer;
             box-sizing: border-box;
-            width: 50%;
-            margin: 0;
-            padding: 10px;
-            background: #bdc3c7;
-            color: #4f565b;
-            font-size: 16px;
-            text-align: center;
-            line-height: 1;
-            transition: .2s;
-            &:first-of-type,&:last-of-type{
+          	width: 50%;
+          	margin: 0;
+          	padding: 10px;
+          	background: #bdc3c7;
+          	color: #4f565b;
+          	font-size: 16px;
+          	text-align: center;
+          	line-height: 1;
+          	transition: .2s;
+            &:first-of-type{
               border-radius: 3px 0 0 3px;
+            }
+            &:last-of-type{
+              border-radius: 0 3px 3px 0;
             }
           }
         }
       }
+
       div.answerRadioBox{
         width:80%;
         margin-left: auto;
@@ -133,42 +152,32 @@ div.answerBox{
           background:#eef0d7;
           padding:10px 20px;
           border-radius: 8px;
-        	margin-bottom:36px;
+          margin-bottom:36px;
           li{
             margin-bottom:10px;
-            input[type="radio"].answerRadio{
+            input.answerRadio{
               position: relative;
-              top: 10px;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              width: 30px;
-              height: 30px;
-              margin-right: 0.5rem;
-              cursor: pointer;
-              transition: all 0.15s ease-out 0s;
-              color: #ffffff;
-              border: none;
-              outline: none;
-              background: #d7cbcb;
-              -webkit-appearance: none;
-                      appearance: none;
+            	top: 10px;
+            	right: 0;
+            	bottom: 0;
+            	left: 0;
+            	width: 30px;
+            	height: 30px;
+            	margin-right: 0.5rem;
+            	cursor: pointer;
+            	transition: all 0.15s ease-out 0s;
+            	color: #ffffff;
+            	border: none;
+            	outline: none;
+            	background: #d7cbcb;
+            	-webkit-appearance: none;
+            	        appearance: none;
               border-radius: 50%;
-                &:after{
-                  border-radius: 50%;
-                }
+              &:after{
+                border-radius: 50%;
+              }
               &:hover{
                 background: #d6a9a9;
-              }
-              label{
-                display: inline-block;
-                width:80%;
-                padding:4px 10px;
-                border-radius: 4px;
-                box-sizing: border-box;
-                &:hover{
-                  background: #d6a9a9;
-                }
               }
               &:checked{
                 background: #da3c41;
@@ -187,9 +196,19 @@ div.answerBox{
                   display: block;
                   content: '';
                   -webkit-animation: click-wave 0.65s;
-                  animation: click-wave 0.65s;
+                          animation: click-wave 0.65s;
                   background: #da3c41;
                 }
+              }
+            }
+            label{
+              display: inline-block;
+              width:80%;
+              padding:4px 10px;
+              border-radius: 4px;
+              box-sizing: border-box;
+              &:hover{
+                background: #d6a9a9;
               }
             }
           }
