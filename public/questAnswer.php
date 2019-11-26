@@ -60,7 +60,7 @@ $resultChoices = $app->getValues()->resultChoices;
                 position:'outside',
                 showActualPercentages: true,
                 outsidePadding: 4,
-                textMargin: 4
+                textMargin: 8
             }
           }
         }
