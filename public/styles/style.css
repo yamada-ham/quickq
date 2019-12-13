@@ -969,3 +969,75 @@ div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTi
   background: rgba(200, 200, 200, 0.2);
   text-decoration: underline;
 }
+
+div.theCategoryBox {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul {
+  padding: 0;
+  position: relative;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li a {
+  display: block;
+  font-size: 1.1rem;
+  color: #0000ee;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li a:hover {
+  text-decoration: underline;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li a:visited {
+  color: #0000ee;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li div.categoryQuestData img.answerNumIcon {
+  width: 18px;
+  margin-right: 4px;
+}
+
+div.theCategoryBox div.inTheCategoryBox ul li div.categoryQuestData span {
+  vertical-align: 4px;
+}
+
+div.paginationBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.paginationBox div.inPaginationBox ul.pagination li a {
+  color: #000000;
+  float: left;
+  margin-right: 2px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+div.paginationBox div.inPaginationBox ul.pagination li a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+div.paginationBox div.inPaginationBox ul.pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+div.paginationBox div.inPaginationBox ul.pagination li a.pageEnd {
+  padding: 8px 12px;
+}
