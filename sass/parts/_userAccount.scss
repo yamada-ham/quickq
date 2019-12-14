@@ -1,0 +1,44 @@
+div.accountInfoBox{
+  div.inAccountInfoBox{
+    div.userAccountBox{
+      width:94%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:10px;
+      margin-bottom:20px;
+      div.inUserAccountBox{
+        border:solid 1px #c8c8c8;
+        border-radius:4px;
+        padding:8px 10px;
+      }
+    }
+    div.accountServiceListBox{
+      width:94%;
+      margin-left: auto;
+      margin-right: auto;
+      ul{
+        li{
+          border-top:solid 1px #c8c8c8;
+          border-left:solid 1px #c8c8c8;
+          border-right:solid 1px #c8c8c8;
+          border-radius:4px;
+          &:last-child{
+            border-bottom:solid 1px #c8c8c8;
+          }
+          a{
+            position:relative;
+            display: block;
+            padding:8px 10px;
+            img{
+              height:20px;
+              position: absolute;
+              top:50%;
+              right:0%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

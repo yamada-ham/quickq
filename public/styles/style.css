@@ -970,6 +970,51 @@ div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTi
   text-decoration: underline;
 }
 
+div.accountInfoBox div.inAccountInfoBox div.userAccountBox {
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.userAccountBox div.inUserAccountBox {
+  border: solid 1px #c8c8c8;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox {
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li {
+  border-top: solid 1px #c8c8c8;
+  border-left: solid 1px #c8c8c8;
+  border-right: solid 1px #c8c8c8;
+  border-radius: 4px;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li:last-child {
+  border-bottom: solid 1px #c8c8c8;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li a {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+}
+
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li a img {
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+}
+
 div.theCategoryBox {
   width: 90%;
   margin-right: auto;

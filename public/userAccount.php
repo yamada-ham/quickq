@@ -19,24 +19,31 @@ $app->run(h($app->me()->id));
 <?php require_once(PARTS_PASS .'headerPart.php') ?>
 <div class="accountInfoBox">
   <div class="inAccountInfoBox">
-    <div class="accountBarBox">
+    <!-- <div class="accountBarBox">
       <p><?= h($app->me()->userName);?>さん</p>
-    </div>
-    <div>
-      <div>
-        <p>ユーザー名:<?= h($app->me()->userName);?></p>
-        <p>アドレス:<?= h($app->me()->email);?></p>
+    </div> -->
+
+      <div class="userAccountBox">
+        <div class="inUserAccountBox">
+          <p>ユーザー名:<?= h($app->me()->userName);?></p>
+          <p>アドレス:<?= h($app->me()->email);?></p>
+        </div>
       </div>
-    </div>
-    <div class="accountInfoChangeCase">
-      <div class="inAccountInfoChangeCase">
-        <a href="./userAccountInfoChange.php">アカウント情報の変更</a>
-      </div>
-    </div>
-    <div>
-      <div>
-        <p><a href="./userQuests.php">作成したアンケート</a></p>
-      </div>
+      <div class="accountServiceListBox">
+        <ul>
+          <li><a href="./userAccountInfoChange.php">アカウント情報の変更<img src="./image/icon/ya.png"></a></li>
+          <li><a href="./userQuests.php">作成したアンケート<img src="./image/icon/ya.png"></i></a></li>
+        </ul>
+      <!-- <div class="accountInfoChangeCase inAccountFlexBox">
+        <div class="inAccountInfoChangeCase">
+          <a href="./userAccountInfoChange.php">アカウント情報の変更<img src="./image/icon/ya.png"></a>
+        </div>
+      </div> -->
+      <!-- <div class="inAccountFlexBox">
+        <div>
+          <p><a href="./userQuests.php">作成したアンケート<i class="fas fa-angle-right"></i></a></p>
+        </div>
+      </div> -->
     </div>
   </div>
 </div>
