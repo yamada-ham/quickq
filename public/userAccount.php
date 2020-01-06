@@ -23,12 +23,12 @@ $app->run(h($app->me()->id));
       <p><?= h($app->me()->userName);?>さん</p>
     </div> -->
 
-      <div class="userAccountBox">
+      <!-- <div class="userAccountBox">
         <div class="inUserAccountBox">
           <p>ユーザー名:<?= h($app->me()->userName);?></p>
           <p>アドレス:<?= h($app->me()->email);?></p>
         </div>
-      </div>
+      </div> -->
       <div class="accountServiceListBox">
         <ul>
           <li><a href="./userAccountInfoChange.php">アカウント情報の変更<img src="./image/icon/ya.png"></a></li>
