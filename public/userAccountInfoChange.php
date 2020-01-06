@@ -24,8 +24,12 @@ $userData = $app->getValues()->userData;
       <h2>あなたの情報を変更</h2>
 
   <form action="" method="POST">
-    <label for="userName">ユーザー名:</label><input type='text' id="userName" name="userName" value="<?= $userData->userName ?>">
-    <label for="email">メールアドレス:</label><input type='text' id="email" name="email" value="<?= $userData->email ?>">
+    <div class="inputBox">
+      <label for="userName">name:</label><input type='text' id="userName" name="userName" value="<?= $userData->userName ?>">
+    </div>
+    <div class="inputBox">
+      <label for="email">email:</label><input type='text' id="email" name="email" value="<?= $userData->email ?>">
+    </div>
     <p><input type="submit" value="変更内容を保存"></p>
     <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
   </form>
