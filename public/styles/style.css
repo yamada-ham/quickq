@@ -215,6 +215,14 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type="submit"] {
   font-size: 1rem;
 }
 
+footer {
+  background: #717171;
+}
+
+footer div.inFooterBox p {
+  text-align: center;
+}
+
 div.topImgBox {
   margin-bottom: 8px;
 }
@@ -235,7 +243,21 @@ div.topImgBox div.inTopImgBox img {
   transform: translate(0%, -50%);
 }
 
-div.newListBox div.inNewListBox {
+@media only screen and (min-width: 767px) {
+  ul.questLimitBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  ul.questLimitBox li.newListBox {
+    width: 49%;
+  }
+}
+
+ul.questLimitBox li.newListBox div.inNewListBox {
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
@@ -243,10 +265,10 @@ div.newListBox div.inNewListBox {
   border-radius: 20px;
 }
 
-div.newListBox div.inNewListBox div h2 {
+ul.questLimitBox li.newListBox div.inNewListBox div h2 {
   display: inline-block;
   position: relative;
-  background: #a6d3c8;
+  background: #fca4a4;
   color: black;
   padding: 4px 8px;
   margin-top: 4px;
@@ -254,7 +276,7 @@ div.newListBox div.inNewListBox div h2 {
   margin-left: 4px;
 }
 
-div.newListBox div.inNewListBox div h2:before {
+ul.questLimitBox li.newListBox div.inNewListBox div h2:before {
   position: absolute;
   content: '';
   top: 100%;
@@ -264,23 +286,40 @@ div.newListBox div.inNewListBox div h2:before {
   border-right: solid 15px #959e9b;
 }
 
-div.newListBox div.inNewListBox ul {
+ul.questLimitBox li.newListBox div.inNewListBox ul {
   margin: 2px 8px;
 }
 
-div.newListBox div.inNewListBox ul li {
+ul.questLimitBox li.newListBox div.inNewListBox ul li {
   border-bottom: solid 1px #d0d0d0;
   margin-bottom: 6px;
 }
 
-div.newListBox div.inNewListBox ul li a {
+ul.questLimitBox li.newListBox div.inNewListBox ul li a {
   display: block;
   text-decoration: none;
   color: #0e00aa;
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li {
-  position: relative;
+ul.questLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
+  background: #94ccff;
+}
+
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background: #e6f2f0;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li {
+    float: left;
+    width: 33%;
+  }
 }
 
 div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
@@ -293,6 +332,17 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
   position: relative;
 }
 
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
+    padding-bottom: 4px;
+    padding-left: 0;
+    font-size: 1rem;
+    background-color: rgba(105, 182, 51, 0);
+    color: #000000;
+    border-bottom: solid 0px;
+  }
+}
+
 div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
   display: block;
   content: "+";
@@ -303,6 +353,12 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
   transition: 0.3s;
 }
 
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
+    content: "";
+  }
+}
+
 div.categoryBox div.inCategoryBox ul.accordion_ul li section h1.rotate225:before {
   transform: rotate(180deg);
   color: black;
@@ -310,16 +366,32 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1.rotate225:before
 }
 
 div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   border-bottom: solid 1px #D6D6D6;
   padding: 8px 0 8px 24px;
 }
 
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li {
+    font-size: 0.8rem;
+    border-bottom: solid 0px rgba(214, 214, 214, 0);
+    box-sizing: border-box;
+    width: 33%;
+    float: left;
+    padding: 0;
+  }
+}
+
 div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li a {
-  position: relative;
   color: black;
   display: block;
   padding: 2px 4px;
+}
+
+@media only screen and (min-width: 767px) {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li a {
+    padding: 2px;
+  }
 }
 
 div.contentsBox {

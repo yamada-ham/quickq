@@ -6,4 +6,10 @@ class IndexModel extends \MyApp\Model{
     $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
     return $stmt -> fetchAll();
   }
+
+  public function popularLimit5(){
+    $stmt = $this->db->query("select code,questTitle from quests order by numberOfResponses desc Limit 5");
+    $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
+    return $stmt -> fetchAll();
+  }
 }

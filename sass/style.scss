@@ -79,8 +79,29 @@ div.createBox{
     }
   }
 }
+$breakpoints: (
+    xs: "only screen and (min-width: 320px)",
+    s: "only screen and (min-width: 575px)",
+    m: "only screen and (min-width: 767px)",
+    l: "only screen and (min-width: 991px)",
+    xl: "only screen and (min-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+// #wrap{
+//   @include media(l) {
+//         width:80%;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+// }
 @import 'parts/_keyframes';
 @import 'parts/_partHeader';
+@import 'parts/_partFooter';
 @import 'parts/_index';
 @import 'parts/_login_signup';
 @import 'parts/_questAnswer';

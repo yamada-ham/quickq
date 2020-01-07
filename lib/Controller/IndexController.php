@@ -11,5 +11,6 @@ class IndexController extends \MyApp\Controller {
     // }
     $questModel = new \MyApp\Model\IndexModel();
     $this->setValues('quests',$questModel->findLimit5());
+    $this->setValues('popularQuests',$questModel->popularLimit5());
   }
 }

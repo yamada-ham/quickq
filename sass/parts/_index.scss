@@ -15,55 +15,84 @@ div.topImgBox{
     }
   }
 }
-
-div.newListBox{
-  div.inNewListBox{
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom:10px;
-    border:solid rgb(255, 209, 171) 6px;
-    border-radius: 20px;
-    div{
-      h2{
-        display:inline-block;
-        position: relative;
-        background: #a6d3c8;
-        color: black;
-        padding:4px 8px;
-        margin-top:4px;
-        margin-bottom:14px;
-        margin-left:4px;
-        &:before{
-          position: absolute;
-          content: '';
-          top: 100%;
-          left: 0;
-          border: none;
-          border-bottom: solid 9px transparent;
-          border-right: solid 15px rgb(149, 158, 155);
+ul.questLimitBox{
+    @include media(m) {
+        display: flex;
+        justify-content: center;
+        margin-bottom:4px;
+      }
+  li.newListBox{
+    @include media(m) {
+        width:49%;
+      }
+    div.inNewListBox{
+      margin-left: 4px;
+      margin-right: 4px;
+      margin-bottom:10px;
+      border:solid rgb(255, 209, 171) 6px;
+      border-radius: 20px;
+      div{
+        h2{
+          display:inline-block;
+          position: relative;
+          background: rgb(252, 164, 164);
+          color: black;
+          padding:4px 8px;
+          margin-top:4px;
+          margin-bottom:14px;
+          margin-left:4px;
+          &:before{
+            position: absolute;
+            content: '';
+            top: 100%;
+            left: 0;
+            border: none;
+            border-bottom: solid 9px transparent;
+            border-right: solid 15px rgb(149, 158, 155);
+          }
+        }
+      }
+      ul{
+        margin:2px 8px;
+        li{
+          border-bottom:solid 1px #d0d0d0;
+          margin-bottom:6px;
+          a{
+            display: block;
+            text-decoration: none;
+            color:#0e00aa;
+          }
         }
       }
     }
-    ul{
-      margin:2px 8px;
-      li{
-        border-bottom:solid 1px #d0d0d0;
-        margin-bottom:6px;
-        a{
-          display: block;
-          text-decoration: none;
-          color:#0e00aa;
+    &:nth-child(2){
+      div.inNewListBox{
+        div{
+          h2{
+            background: rgb(148, 204, 255);
+          }
         }
       }
     }
   }
 }
 
+
 div.categoryBox{
   div.inCategoryBox{
+    @include media(m){
+      padding-top:14px;
+      padding-bottom:14px;
+      padding-right:40px;
+      padding-left:40px;
+      background: #e6f2f0;
+    }
     ul.accordion_ul{
       li{
-        position:relative;
+        @include media(m){
+          float: left;
+          width:33%;
+        }
         section{
           h1{
             background-color: #69b633;
@@ -73,6 +102,14 @@ div.categoryBox{
             color: #FFF;
             cursor: pointer;
             position: relative;
+            @include media(m) {
+                padding-bottom:4px;
+                padding-left:0;
+                font-size:1rem;
+                background-color: rgba(105, 182, 51, 0);
+                color:#000000;
+                border-bottom: solid 0px;
+              }
             &:before{
               display: block;
               content: "+";
@@ -81,6 +118,9 @@ div.categoryBox{
               right: 15px;
               transform-origin: 50% 58%;
               transition:0.3s;
+              @include media(m) {
+                  content:""
+                }
             }
             &.rotate225:before{
               transform: rotate(180deg);
@@ -90,14 +130,24 @@ div.categoryBox{
           }
           ul{
             li{
-              background-color: #ffffff;
+              background-color: rgba(255, 255, 255, 0);
               border-bottom: solid 1px #D6D6D6;
               padding: 8px 0 8px 24px;
+              @include media(m) {
+                  font-size: 0.8rem;
+                  border-bottom: solid 0px rgba(214, 214, 214, 0);
+                  box-sizing: border-box;
+                  width:33%;
+                  float:left;
+                  padding:0;
+                }
               a{
-                position: relative;
                 color:black;
                 display: block;
                 padding:2px 4px;
+                @include media(m) {
+                    padding:2px;
+                  }
               }
             }
           }

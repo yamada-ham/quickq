@@ -23,22 +23,32 @@ $app->run();
       <img src = "./image/quickq_title.png">
     </div>
   </div>
-
-  <div class="newListBox">
-    <div class="inNewListBox">
-      <div><h2>最新アンケート</h2></div>
-      <ul>
-        <?php foreach($app->getValues()->quests as $quest) :?>
-        <li><a href="<?= SITE_URL.'/questAnswer.php?code=' .h($quest->code);?>"><?= h($quest->questTitle);?></a></li>
-      <?php endforeach; ?>
-      </ul>
-    </div>
-  </div><!-- newListBox -->
-
+  <ul class="questLimitBox">
+    <li class="newListBox">
+      <div class="inNewListBox">
+        <div><h2>最新アンケート</h2></div>
+        <ul>
+          <?php foreach($app->getValues()->quests as $quest) :?>
+          <li><a href="<?= SITE_URL.'/questAnswer.php?code=' .h($quest->code);?>"><?= h($quest->questTitle);?></a></li>
+        <?php endforeach; ?>
+        </ul>
+      </div>
+    </li><!-- newListBox -->
+    <li class="newListBox">
+      <div class="inNewListBox">
+        <div><h2>人気アンケート</h2></div>
+        <ul>
+          <?php foreach($app->getValues()->popularQuests as $quest) :?>
+          <li><a href="<?= SITE_URL.'/questAnswer.php?code=' .h($quest->code);?>"><?= h($quest->questTitle);?></a></li>
+        <?php endforeach; ?>
+        </ul>
+      </div>
+    </li><!-- newListBox -->
+  </ul>
 
 <div class="categoryBox">
     <div class="inCategoryBox">
-    <ul class="accordion_ul">
+    <ul class="accordion_ul clear">
       <?php foreach(CATEGORY as $key => $arr) :?>
         <li>
           <section>

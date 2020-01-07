@@ -13,10 +13,13 @@ $(function(){
   if($("h2.greet").length > 0){
     greetInDrwer();
   }
+  if($("ul.questLimitBox").length > 0){
+    console.log("hello");
+    questsLimitLength();
+  }
   if($(".childInCreateCategoryBox") != null){
     createCategory();
   }
-
 });
 
 function createCategory(){
@@ -58,7 +61,44 @@ function greetInDrwer(){
   }
 }
 
+function questsLimitLength(){
+  let quests = document.querySelectorAll('ul.questLimitBox li.newListBox div.inNewListBox ul li a');
+
+  if(window.innerWidth >= 991){
+    quests.forEach((quest)=>{
+      var questText = quest.textContent;
+        if(questText.length > 27){
+          quest.textContent=questText.slice(0,27)+'...';
+        }
+    });
+  }else if(window.innerWidth >= 767){
+    quests.forEach((quest)=>{
+      var questText = quest.textContent;
+        if(questText.length > 20){
+          quest.textContent=questText.slice(0,20)+'...';
+        }
+    });
+  }else{
+    quests.forEach((quest)=>{
+      var questText = quest.textContent;
+        if(questText.length > 30){
+          quest.textContent=questText.slice(0,30)+'...';
+        }
+    });
+  }
+}
+
 function slide(){
+  $(window).on("resize",()=>{
+    if(window.innerWidth >= 990){
+      location.reload();
+      return;
+    }
+  })
+  if(window.innerWidth >= 991){
+    $('.accordion_ul ul').show();
+    return;
+  }
   $('.accordion_ul ul').hide();
     $('.accordion_ul h1').click(function(e){
       if($(this).hasClass('rotate225')){
