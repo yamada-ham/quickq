@@ -3,17 +3,21 @@ header{
   div.inHeader{
     div.drawer{
       display: inline-block;
-      padding:6px 12px;
+      padding:8px 12px;
       border: solid 1px #aaaaaa;
       border-radius:5px;
       cursor:pointer;
       z-index:97;
       background:#dedede;
       float:left;
-      margin-top:6px;
-      margin-left:8px;
+      position:relative;
+      top:4px;
+      left:6px;
+      @include media(l){
+        top:6px;
+        left:10px;
+      }
       img{
-
       }
     }
     div.inTitleBox{
@@ -22,26 +26,59 @@ header{
         padding-left:5px;
         float:left;
         a{
-          position: relative;
+          position:relative;
           margin-left:14px;
           display:inline-block;
           color:#ffffff;
           font-size:2.4rem;
           text-decoration: none;
+          @include media(l){
+            font-size: 3rem;
+            line-height: 1.0;
+          }
         }
       }
     }
     div.loginInfoBox{
       position: relative;
-      top:10px;
-      right:8px;
+      top:5px;
+      right:5px;
       float:right;
-      p{
+      @include media(l){
+        right:40px;
+      }
+      & > p{
+        float:left;
         a{
-          font-size:1.1rem;
+          display: block;
           color:#ffffff;
           font-weight:bold;
           text-decoration: none;
+          box-sizing: border-box;
+          padding:6px 8px 6px 8px;
+          border: 1px solid rgba(0,0,0,0);
+          &:hover{
+            border:1px dotted #ffffff;
+          }
+          span{
+            &.greet{
+              display:none;
+              @include media(l){
+                display:block;
+                font-size:0.8rem;
+                color: #ffffff;
+                line-height: 1.0;
+              }
+            }
+            &.account{
+              color:#ffffff;
+              font-size:1.2rem;
+              @include media(l){
+                display: block;
+                line-height: 1.0;
+              }
+            }
+          }
         }
       }
     }
@@ -71,7 +108,7 @@ nav.drwerMenuBox{
   div.inDrwerMenuBox{
     h2.greet{
       font-weight: bold;
-      font-size:1.3rem;
+      font-size:1.1rem;
       color:#ffffff;
       padding:8px;
       background: #024d2d;

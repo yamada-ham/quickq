@@ -91,7 +91,7 @@ $resultChoices = $app->getValues()->resultChoices;
   </div><!-- parmanentQuestBox -->
 
   <div class="answerRadioBox">
-    <p>Q.<?= h($data->questTitle); ?>(該当するものを一つお答えください)</p>
+    <p>Q.<?= h($data->questTitle); ?><br>(該当するものを一つお答えください)</p>
     <ul class="inAnswerRadioBox">
       <?php for($i = 0; $i < h($data->choicesNum);$i++):?>
       <li><input type="radio" name="choice" class="answerRadio" id="answerRadio<?=$i?>" value="<?=$choicesList[$i]?>"><label for="answerRadio<?=$i?>" ><?=h($choicesList[$i]); ?></label></li>

@@ -57,6 +57,12 @@ display: block;
 clear: both;
 }
 
+@mixin clear{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .hidden{
   display:none;
 }

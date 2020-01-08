@@ -7,10 +7,10 @@ $(function(){
     choiceInputBtn();
   }
 
-  if($(".accordion_ul")!= null){
+  if($(".accordion_ul").length > 0){
     slide();
   }
-  if($("h2.greet").length > 0){
+  if($(".greet").length > 0){
     greetInDrwer();
   }
   if($("ul.questLimitBox").length > 0){
@@ -54,11 +54,13 @@ $('.parentCategory').change(function() {
 });
 }
 function greetInDrwer(){
-  let greet = document.querySelector('h2.greet');
-  var greetText = greet.textContent;
-  if(greetText.length  > 10){
-    greet.textContent=greetText.slice(0,10)+'...';
-  }
+  let greets = document.querySelectorAll('.greet');
+  greets.forEach((greet)=>{
+    let greetText = greet.textContent;
+    if(greetText.length  > 17){
+      greet.textContent=greetText.slice(0,17)+'...';
+    }
+  });
 }
 
 function questsLimitLength(){

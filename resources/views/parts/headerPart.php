@@ -9,7 +9,7 @@
       </div>
       <div class="loginInfoBox">
         <?php if($app->isLoggedIn()): ?>
-          <p><a href="./userAccount.php">アカウント
+          <p><a href="./userAccount.php"><span class="greet"><?= h($app->me()->userName);?>さん</span><span class="account">Myアカウント</span></a></p>
         <?php else: ?>
           <p><a href="./login.php">ログイン
         <?php endif; ?>
@@ -18,28 +18,29 @@
   </div><!-- inHeader -->
 </header>
 
-
-  <nav class="drwerMenuBox">
-    <div class="inDrwerMenuBox">
-        <?php if($app->isLoggedIn()): ?>
-          <h2 class="greet">こんにちは<?= h($app->me()->userName);?>さん</h2>
-          <ul>
-            <li><a href="userAccount.php">アカウント管理</a></li>
-            <li><a href="createQuest.php">アンケートを作成する</a></li>
-            <li><form action="logout.php" method="post" id="logout">
-              <p><input type="submit" value="ログアウト">
-              <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>"></p>
-            </form></li>
-          </ul>
-
-        <?php else :?>
-          <ul>
-          <li class="login"><a href="login.php">ログイン</a></li>
-          <li class="signup"><a href="signup.php">アカウント作成はこちら</a></li>
+<nav class="drwerMenuBox">
+  <div class="inDrwerMenuBox">
+      <?php if($app->isLoggedIn()): ?>
+        <h2 class="greet">Hello.<?= h($app->me()->userName);?>さん</h2>
+        <ul>
+          <li><a href="userAccount.php">アカウント管理</a></li>
+          <li><a href="createQuest.php">アンケートを作成する</a></li>
+          <li><form action="logout.php" method="post" id="logout">
+            <p><input type="submit" value="ログアウト">
+            <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>"></p>
+          </form></li>
         </ul>
-        <?php endif; ?>
-    </div>
-  </nav>
+      <?php else :?>
+        <ul>
+        <li class="login"><a href="login.php">ログイン</a></li>
+        <li class="signup"><a href="signup.php">アカウント作成はこちら</a></li>
+      </ul>
+      <?php endif; ?>
+  </div>
+</nav>
+
+
+
 
 
 

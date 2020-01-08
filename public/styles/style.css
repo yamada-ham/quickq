@@ -103,15 +103,23 @@ header {
 
 header div.inHeader div.drawer {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border: solid 1px #aaaaaa;
   border-radius: 5px;
   cursor: pointer;
   z-index: 97;
   background: #dedede;
   float: left;
-  margin-top: 6px;
-  margin-left: 8px;
+  position: relative;
+  top: 4px;
+  left: 6px;
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.drawer {
+    top: 6px;
+    left: 10px;
+  }
 }
 
 header div.inHeader div.inTitleBox h1 {
@@ -129,18 +137,67 @@ header div.inHeader div.inTitleBox h1 a {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.inTitleBox h1 a {
+    font-size: 3rem;
+    line-height: 1.0;
+  }
+}
+
 header div.inHeader div.loginInfoBox {
   position: relative;
-  top: 10px;
-  right: 8px;
+  top: 5px;
+  right: 5px;
   float: right;
 }
 
-header div.inHeader div.loginInfoBox p a {
-  font-size: 1.1rem;
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.loginInfoBox {
+    right: 40px;
+  }
+}
+
+header div.inHeader div.loginInfoBox > p {
+  float: left;
+}
+
+header div.inHeader div.loginInfoBox > p a {
+  display: block;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  box-sizing: border-box;
+  padding: 6px 8px 6px 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+header div.inHeader div.loginInfoBox > p a:hover {
+  border: 1px dotted #ffffff;
+}
+
+header div.inHeader div.loginInfoBox > p a span.greet {
+  display: none;
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.loginInfoBox > p a span.greet {
+    display: block;
+    font-size: 0.8rem;
+    color: #ffffff;
+    line-height: 1.0;
+  }
+}
+
+header div.inHeader div.loginInfoBox > p a span.account {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.loginInfoBox > p a span.account {
+    display: block;
+    line-height: 1.0;
+  }
 }
 
 div.overlay {
@@ -167,7 +224,7 @@ nav.drwerMenuBox {
 
 nav.drwerMenuBox div.inDrwerMenuBox h2.greet {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #ffffff;
   padding: 8px;
   background: #024d2d;
@@ -238,6 +295,7 @@ div.topImgBox div.inTopImgBox {
 
 div.topImgBox div.inTopImgBox img {
   width: 100%;
+  max-height: 500px;
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
