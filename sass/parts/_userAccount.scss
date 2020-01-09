@@ -1,22 +1,25 @@
 div.accountInfoBox{
   div.inAccountInfoBox{
-    div.userAccountBox{
-      width:94%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top:10px;
-      margin-bottom:20px;
-      div.inUserAccountBox{
-        border:solid 1px #c8c8c8;
-        border-radius:4px;
-        padding:8px 10px;
-      }
-    }
+    // div.userAccountBox{
+    //   width:94%;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   margin-top:10px;
+    //   margin-bottom:20px;
+    //   div.inUserAccountBox{
+    //     border:solid 1px #c8c8c8;
+    //     border-radius:4px;
+    //     padding:8px 10px;
+    //   }
+    // }
     div.accountServiceListBox{
       width:94%;
       margin-left: auto;
       margin-right: auto;
       margin-top:12px;
+      @include media(l){
+        width:60%;
+      }
       ul{
         li{
           border-top:solid 1px #c8c8c8;

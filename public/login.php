@@ -30,7 +30,7 @@ $app->run();
           <div class="inputTextBox">
             <label for="password" class="emailLabel">pass:</label>
             <p class="typeText">
-              <input id="password" type="password" name="password" placeholder="•••••••••" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
+              <input id="password" type="password" name="password" placeholder="" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
             </p>
           </div>
 

@@ -119,6 +119,7 @@ header div.inHeader div.drawer {
   header div.inHeader div.drawer {
     top: 6px;
     left: 10px;
+    margin-right: 8px;
   }
 }
 
@@ -191,6 +192,7 @@ header div.inHeader div.loginInfoBox > p a span.greet {
 header div.inHeader div.loginInfoBox > p a span.account {
   color: #ffffff;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 991px) {
@@ -298,7 +300,14 @@ div.topImgBox div.inTopImgBox img {
   max-height: 500px;
   position: absolute;
   top: 50%;
-  transform: translate(0%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox img {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 767px) {
@@ -359,6 +368,10 @@ ul.questLimitBox li.newListBox div.inNewListBox ul li a {
   color: #0e00aa;
 }
 
+ul.questLimitBox li.newListBox div.inNewListBox ul li a:hover {
+  color: #756be4;
+}
+
 ul.questLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
   background: #94ccff;
 }
@@ -374,13 +387,14 @@ ul.questLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
 }
 
 @media only screen and (min-width: 767px) {
-  div.categoryBox div.inCategoryBox ul.accordion_ul li {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li {
     float: left;
     width: 33%;
+    margin-bottom: 4px;
   }
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1 {
   background-color: #69b633;
   border-bottom: solid 1px #59ffdc;
   margin-bottom: 1px;
@@ -391,7 +405,7 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
 }
 
 @media only screen and (min-width: 767px) {
-  div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1 {
     padding-bottom: 4px;
     padding-left: 0;
     font-size: 1rem;
@@ -401,7 +415,7 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1 {
   }
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1:before {
   display: block;
   content: "+";
   font-weight: bold;
@@ -412,25 +426,25 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
 }
 
 @media only screen and (min-width: 767px) {
-  div.categoryBox div.inCategoryBox ul.accordion_ul li section h1:before {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1:before {
     content: "";
   }
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li section h1.rotate225:before {
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1.rotate225:before {
   transform: rotate(180deg);
   color: black;
   content: "-";
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li {
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section ul li {
   background-color: rgba(255, 255, 255, 0);
   border-bottom: solid 1px #D6D6D6;
   padding: 8px 0 8px 24px;
 }
 
 @media only screen and (min-width: 767px) {
-  div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section ul li {
     font-size: 0.8rem;
     border-bottom: solid 0px rgba(214, 214, 214, 0);
     box-sizing: border-box;
@@ -440,22 +454,28 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li {
   }
 }
 
-div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li a {
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section ul li a {
   color: black;
   display: block;
   padding: 2px 4px;
 }
 
 @media only screen and (min-width: 767px) {
-  div.categoryBox div.inCategoryBox ul.accordion_ul li section ul li a {
+  div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section ul li a {
     padding: 2px;
   }
 }
 
 div.contentsBox {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 991px) {
+  div.contentsBox {
+    width: 60%;
+  }
 }
 
 div.contentsBox div.inContentsBox h2 {
@@ -514,6 +534,14 @@ div.contentsBox div.inContentsBox p.errBox {
   padding-bottom: 4px;
 }
 
+@media only screen and (min-width: 991px) {
+  div.contentsBox div.inContentsBox div.submitBox {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 div.contentsBox div.inContentsBox div.submitBox p.inSubmitBox input[type="submit"] {
   display: inline-block;
   border-radius: 5%;
@@ -534,6 +562,14 @@ div.contentsBox div.inContentsBox div.submitBox p.inSubmitBox input[type="submit
   opacity: 1;
 }
 
+@media only screen and (min-width: 991px) {
+  div.contentsBox div.inContentsBox div.signupBox {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 div.contentsBox div.inContentsBox div.signupBox p.inSignupBox a {
   display: inline-block;
   text-decoration: none;
@@ -552,7 +588,19 @@ div.answerBox {
 }
 
 div.answerBox div.inAnswerBox {
-  width: 80%;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 991px) {
+  div.answerBox div.inAnswerBox {
+    width: 80%;
+  }
+}
+
+div.answerBox div.inAnswerBox div.isAnswered {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1100,25 +1148,17 @@ div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTi
   text-decoration: underline;
 }
 
-div.accountInfoBox div.inAccountInfoBox div.userAccountBox {
-  width: 94%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-div.accountInfoBox div.inAccountInfoBox div.userAccountBox div.inUserAccountBox {
-  border: solid 1px #c8c8c8;
-  border-radius: 4px;
-  padding: 8px 10px;
-}
-
 div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox {
   width: 94%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
+}
+
+@media only screen and (min-width: 991px) {
+  div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox {
+    width: 60%;
+  }
 }
 
 div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li {
@@ -1219,9 +1259,15 @@ div.paginationBox div.inPaginationBox ul.pagination li a.pageEnd {
 }
 
 div.changeFormBox {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 767px) {
+  div.changeFormBox {
+    width: 70%;
+  }
 }
 
 div.changeFormBox div.inChangeFormBox h2 {
@@ -1255,6 +1301,18 @@ div.changeFormBox div.inChangeFormBox form div.inputBox input[type="text"]:focus
   box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
 }
 
+div.changeFormBox div.inChangeFormBox form p {
+  width: 100%;
+}
+
+@media only screen and (min-width: 991px) {
+  div.changeFormBox div.inChangeFormBox form p {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 div.changeFormBox div.inChangeFormBox form p input[type="submit"] {
   display: inline-block;
   border-radius: 5%;
@@ -1273,4 +1331,8 @@ div.changeFormBox div.inChangeFormBox form p input[type="submit"] {
 
 div.changeFormBox div.inChangeFormBox form p input[type="submit"]:hover {
   opacity: 1;
+}
+
+div.changeFormBox div.inChangeFormBox div.cancel {
+  text-align: center;
 }

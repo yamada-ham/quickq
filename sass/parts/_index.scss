@@ -12,7 +12,11 @@ div.topImgBox{
       max-height:500px;
       position: absolute;
       top:50%;
-      transform: translate(0%,-50%);
+      left:50%;
+      transform: translate(-50%,-50%);
+      @include media(l){
+        width:50%;
+      }
     }
   }
 }
@@ -62,6 +66,9 @@ ul.questLimitBox{
             display: block;
             text-decoration: none;
             color:#0e00aa;
+            &:hover{
+              color:#756be4;
+            }
           }
         }
       }
@@ -89,10 +96,11 @@ div.categoryBox{
       background: #e6f2f0;
     }
     ul.accordion_ul{
-      li{
+      li.accordion_li{
         @include media(m){
           float: left;
           width:33%;
+          margin-bottom:4px;
         }
         section{
           h1{

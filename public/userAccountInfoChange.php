@@ -36,7 +36,7 @@ $userData = $app->getValues()->userData;
     <div class="cancel"><a href="./userAccount.php">キャンセル</a></div>
     </div>
     <div class="">
-      <p class="err"><?= h($app->getErrors('InvalidChange')); ?>　</p>
+      <p class="err"><?= h($app->getErrors('InvalidChange')); ?></p>
       <p class="err"><?= h($app->getErrors('CannotUpdateAccount')); ?></p>
     </div>
   </div>

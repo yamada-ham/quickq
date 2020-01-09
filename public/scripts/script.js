@@ -57,8 +57,8 @@ function greetInDrwer(){
   let greets = document.querySelectorAll('.greet');
   greets.forEach((greet)=>{
     let greetText = greet.textContent;
-    if(greetText.length  > 17){
-      greet.textContent=greetText.slice(0,17)+'...';
+    if(greetText.length  > 14){
+      greet.textContent=greetText.slice(0,14)+'...';
     }
   });
 }

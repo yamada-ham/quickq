@@ -1,7 +1,10 @@
 div.changeFormBox{
-  width:80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width:94%;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(m){
+    width:70%;
+  }
   div.inChangeFormBox{
     h2{
       text-align: center;
@@ -31,6 +34,12 @@ div.changeFormBox{
         }
       }
       p{
+        width:100%;
+        @include media(l){
+          width:40%;
+          margin-left:auto;
+          margin-right:auto;
+        }
         input[type="submit"]{
           display : inline-block;
           border-radius : 5%;
@@ -49,6 +58,12 @@ div.changeFormBox{
             opacity: 1;
           }
         }
+      }
+    }
+    div.cancel{
+      text-align: center;
+      a{
+
       }
     }
   }

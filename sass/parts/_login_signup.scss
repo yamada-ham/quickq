@@ -1,7 +1,10 @@
 div.contentsBox{
-  width:80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(l){
+    width:60%;
+  }
   div.inContentsBox{
     h2{
       text-align: center;
@@ -55,6 +58,11 @@ div.contentsBox{
       padding-bottom: 4px;
     }
     div.submitBox{
+      @include media(l){
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
       p.inSubmitBox{
         input{
           &[type="submit"]{
@@ -79,6 +87,11 @@ div.contentsBox{
       }
     }
     div.signupBox{
+      @include media(l){
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
       p.inSignupBox{
         a{
           display: inline-block;

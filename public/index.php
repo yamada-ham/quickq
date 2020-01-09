@@ -50,7 +50,7 @@ $app->run();
     <div class="inCategoryBox">
     <ul class="accordion_ul clear">
       <?php foreach(CATEGORY as $key => $arr) :?>
-        <li>
+        <li class="accordion_li">
           <section>
           <h1><?= $key?></h1>
           <ul>
