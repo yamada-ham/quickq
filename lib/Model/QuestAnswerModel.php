@@ -35,7 +35,7 @@ class QuestAnswerModel extends \MyApp\Model{
     if($res === false){
       throw new \MyApp\Exception\CannotAnswerQuest();
     }
-    $sql = sprintf('SELECT id,numberOfResponses from quests where code = %d',$values['code']);
+    $sql = sprintf('SELECT id,numberOfResponses FROM quests WHERE code = "%s"',$values["code"]);
     $stmt = $this->db->query($sql);
     $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
     $record = $stmt -> fetch();
