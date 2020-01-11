@@ -34,6 +34,7 @@ $resultChoices = $app->getValues()->resultChoices;
   <?php if($app->checkAnswer($_GET['code'])): ?>
     <div class="isAnswered"><p>回答ありがとうございました。二度目の回答はできません</p></div>
     <div class="chartBox">
+    <div class="questTitle"><p><span>アンケート内容：</span><?=$app->getValues()->questTitle?></p></div>
     <div class="inChartBox">
       <h3>総合結果</h3>
       <canvas id="myChartPie" style="position: relative; height:60vh; width:100vw;"></canvas>

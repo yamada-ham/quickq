@@ -7,10 +7,6 @@ class QuestAnswerController extends \MyApp\Controller {
 
   public function run($code) {
     $this->_questModel = new \MyApp\Model\QuestAnswerModel();
-
-      $this->_questModel->checkGetCode($code);
-    $this->setValues('quest',$this->_questModel->find($code));
-
      if($_SERVER['REQUEST_METHOD']==='POST'){
           $this->postProcess();
           // セッションに保存しておいたトークンの削除
@@ -18,6 +14,9 @@ class QuestAnswerController extends \MyApp\Controller {
           // セッションの保存
           session_write_close();
       }
+      $this->_questModel->checkGetCode($code);
+      $this->setValues('questTitle',$this->_questModel->getQuestTitle());
+      $this->setValues('quest',$this->_questModel->find($code));
       $this->setValues('resultChoices',$this->_questModel->findResultChoices($code));
   }
 

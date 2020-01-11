@@ -110,4 +110,11 @@ class QuestAnswerModel extends \MyApp\Model{
       json_encode($ageVotes),
     ];
   }
+
+  public function getQuestTitle(){
+    $sql = sprintf('SELECT questTitle FROM quests WHERE code = "%s"',$_GET["code"]);
+    $stmt = $this->db->query($sql);
+    $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
+    return $stmt->fetchColumn();
+  }
 }

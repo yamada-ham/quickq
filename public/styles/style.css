@@ -614,6 +614,21 @@ div.answerBox div.inAnswerBox div.chartBox {
   border-bottom: solid 4px #77fbd5;
 }
 
+div.answerBox div.inAnswerBox div.chartBox div.questTitle {
+  background: #f0f4e6;
+  padding: 6px 8px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+div.answerBox div.inAnswerBox div.chartBox div.questTitle p {
+  font-size: 1.1rem;
+}
+
+div.answerBox div.inAnswerBox div.chartBox div.questTitle p span {
+  font-weight: bold;
+}
+
 div.answerBox div.inAnswerBox div.chartBox div.inChartBox h3 {
   text-align: center;
   font-size: 1.6rem;
@@ -1335,4 +1350,45 @@ div.changeFormBox div.inChangeFormBox form p input[type="submit"]:hover {
 
 div.changeFormBox div.inChangeFormBox div.cancel {
   text-align: center;
+}
+
+div.questAnalysisBox {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 991px) {
+  div.questAnalysisBox {
+    width: 80%;
+  }
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.questTitle {
+  background: #f0f4e6;
+  padding: 6px 8px;
+  border-radius: 8px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.questTitle p {
+  font-size: 1.1rem;
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.questTitle p span {
+  font-weight: bold;
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.chartBox {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 4px #77fbd5;
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.chartBox div.inChartBox h3 {
+  text-align: center;
+  font-size: 1.6rem;
 }

@@ -29,6 +29,7 @@ $resultChoices = $app->getValues()->resultChoices;
 
 <div class="questAnalysisBox">
 <div class="inQuestAnalysisBox">
+    <div class="questTitle"><p><span>アンケート内容：</span><?=$app->getValues()->questTitle?></p></div>
 
 <div class="chartBox">
 <div class="inChartBox">

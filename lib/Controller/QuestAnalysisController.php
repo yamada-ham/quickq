@@ -11,6 +11,7 @@ class QuestAnalysisController extends \MyApp\Controller {
     }
     $questAnalysisModel =  new \MyApp\Model\QuestAnalysisModel();
     $questAnalysisModel->checkGetCode();
+    $this->setValues('questTitle',$questAnalysisModel->getQuestTitle());
     $this->setValues('userQuests',$questAnalysisModel->findUserAccount($id));
     $this->setValues('resultChoices',$questAnalysisModel->findResultChoices($code));
   }

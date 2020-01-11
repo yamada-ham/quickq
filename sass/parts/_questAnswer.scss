@@ -22,6 +22,18 @@ div.answerBox{
       padding-top:20px;
       padding-bottom:20px;
       border-bottom:solid 4px #77fbd5;
+      div.questTitle{
+        background: #f0f4e6;
+        padding:6px 8px;
+        border-radius: 8px;
+        margin-bottom: 14px;
+        p{
+          font-size: 1.1rem;
+          span{
+            font-weight: bold;
+          }
+        }
+      }
       div.inChartBox{
         h3{
           text-align:center;
