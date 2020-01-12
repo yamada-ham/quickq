@@ -14,7 +14,6 @@ $(function(){
     greetInDrwer();
   }
   if($("ul.questLimitBox").length > 0){
-    console.log("hello");
     questsLimitLength();
   }
   if($(".childInCreateCategoryBox") != null){

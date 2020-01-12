@@ -103,7 +103,7 @@ header {
 
 header div.inHeader div.drawer {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: solid 1px #aaaaaa;
   border-radius: 5px;
   cursor: pointer;
@@ -117,9 +117,10 @@ header div.inHeader div.drawer {
 
 @media only screen and (min-width: 991px) {
   header div.inHeader div.drawer {
-    top: 6px;
+    top: 8px;
     left: 10px;
-    margin-right: 8px;
+    margin-right: 14px;
+    padding: 8px 14px;
   }
 }
 
@@ -131,7 +132,7 @@ header div.inHeader div.inTitleBox h1 {
 
 header div.inHeader div.inTitleBox h1 a {
   position: relative;
-  margin-left: 14px;
+  margin-left: 8px;
   display: inline-block;
   color: #ffffff;
   font-size: 2.4rem;
@@ -140,15 +141,15 @@ header div.inHeader div.inTitleBox h1 a {
 
 @media only screen and (min-width: 991px) {
   header div.inHeader div.inTitleBox h1 a {
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 1.0;
   }
 }
 
 header div.inHeader div.loginInfoBox {
   position: relative;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  right: 3px;
   float: right;
 }
 
@@ -168,8 +169,14 @@ header div.inHeader div.loginInfoBox > p a {
   font-weight: bold;
   text-decoration: none;
   box-sizing: border-box;
-  padding: 6px 8px 6px 8px;
+  padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0);
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.loginInfoBox > p a {
+    padding: 6px 8px 6px 8px;
+  }
 }
 
 header div.inHeader div.loginInfoBox > p a:hover {
@@ -191,12 +198,13 @@ header div.inHeader div.loginInfoBox > p a span.greet {
 
 header div.inHeader div.loginInfoBox > p a span.account {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 991px) {
   header div.inHeader div.loginInfoBox > p a span.account {
+    font-size: 1.0rem;
     display: block;
     line-height: 1.0;
   }
@@ -276,6 +284,10 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type="submit"] {
 
 footer {
   background: #717171;
+}
+
+footer div.inFooterBox {
+  padding: 6px 8px;
 }
 
 footer div.inFooterBox p {
@@ -1183,6 +1195,10 @@ div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li {
   border-radius: 4px;
 }
 
+div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li:hover {
+  background: #fdffeb;
+}
+
 div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li:last-child {
   border-bottom: solid 1px #c8c8c8;
 }
@@ -1353,7 +1369,7 @@ div.changeFormBox div.inChangeFormBox div.cancel {
 }
 
 div.questAnalysisBox {
-  width: 98%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }

@@ -26,6 +26,9 @@ div.accountInfoBox{
           border-left:solid 1px #c8c8c8;
           border-right:solid 1px #c8c8c8;
           border-radius:4px;
+          &:hover{
+            background:#fdffeb;
+          }
           &:last-child{
             border-bottom:solid 1px #c8c8c8;
           }

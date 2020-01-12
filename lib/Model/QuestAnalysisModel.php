@@ -54,7 +54,7 @@ class QuestAnalysisModel extends \MyApp\Model{
     $ages = [00,10,20,30,40,50,60,70];
   foreach($choicesListArray as $choice){
     foreach($ages as $age){
-        $sql = sprintf('select count(choice) from answers where code = "%s" AND choice = "%s" AND age = "%d"',$code,$choice,$age);
+        $sql = sprintf('select count(choice) from answers where code = "%s" AND choice = "%s" AND age = %s',$code,$choice,$age);
         $stmt = $this->db->query($sql);
         $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
         $array[] =  $stmt->fetchColumn();

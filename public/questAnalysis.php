@@ -114,7 +114,7 @@ var myChart = new Chart(ctx, {
 
 <div class="chartBox">
 <div class="inChartBox">
-  <h3>男性限定の結果</h3>
+  <h3>男性限定</h3>
 <canvas id="myChartDoughnutMan" style="position: relative; height:60vh; width:100vw;"></canvas>
 </div>
 </div>
@@ -145,7 +145,7 @@ var myChartDoughnutMan = new Chart(ctx, {
 
 <div class="chartBox">
 <div class="inChartBox">
-  <h3>女性限定の結果</h3>
+  <h3>女性限定</h3>
 <canvas id="myChartDoughnutWoman" style="position: relative; height:60vh; width:100vw;"></canvas>
 </div>
 </div>
