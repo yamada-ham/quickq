@@ -18,6 +18,10 @@ class CreateQuestController extends \MyApp\Controller {
     }catch(\MyApp\Exception\InvalidQuest $e){
       $this->setErrors('InvalidQuest',$e->getMessage());
     }
+
+    $this->setValues('questTitle',$_POST['questTitle']);
+    $this->setValues('choice',$_POST['choice']);
+
     if($this->hasError()){
       return;
     }else{

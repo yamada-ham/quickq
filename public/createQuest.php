@@ -2,7 +2,7 @@
 require_once(__DIR__ . '/../config/config.php');
 $app = new MyApp\Controller\CreateQuestController();
 $app->run();
-
+$choices = isset($app->getValues()->choice)?$app->getValues()->choice:'';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -27,7 +27,7 @@ $app->run();
       <div class="questTitleBox">
         <p>1.アンケートの内容を記述してください。</p>
         <textarea name="questTitle" class="questTitle" placeholder="例1:カレーに豆腐を入れる。
-例2:好きな種類の音楽は？" maxlength="200"></textarea>
+例2:好きな種類の音楽は？" maxlength="200"><?= isset($app->getValues()->questTitle) ? h($app->getValues()->questTitle) : ''; ?></textarea>
       </div>
 <!-- &#10 改行文字 -->
 
@@ -35,8 +35,13 @@ $app->run();
       <div class="choicesListBox clear">
         <p>2.アンケートの選択欄を作成してください。</p>
         <ul id="choicesList">
-          <li ><input type="text" name="choice[]" value="賛成" placeholder="未入力"></li>
-          <li><input type="text" name="choice[]" value="反対" placeholder="未入力"></li>
+          <?php if(empty($choices)): ?>
+            <li ><input type="text" name="choice[]" value="" placeholder="未入力"></li>
+          <?php else: ?>
+            <?php foreach($choices as $choice): ?>
+              <li ><input type="text" name="choice[]" value="<?= $choice ?>" placeholder="未入力"></li>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </ul>
         <div class="addRemoveChoiceBox">
           <label><input type="button" id="addChoiceInput" value="+"></label>
