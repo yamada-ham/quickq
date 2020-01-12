@@ -908,7 +908,7 @@ div.createQuestBox div.inCreateQuestBox div.questTitleBox textarea.questTitle {
   background-color: snow;
   width: 100%;
   box-sizing: border-box;
-  height: 150px;
+  height: 180px;
   font-size: 1rem;
 }
 
@@ -916,6 +916,11 @@ div.createQuestBox div.inCreateQuestBox div.questTitleBox textarea.questTitle:fo
   border-color: #00abff;
   background-color: #ffffdf;
   outline: none;
+}
+
+div.createQuestBox div.inCreateQuestBox div.questTitleBox span.questTitleTtextLength {
+  display: block;
+  text-align: right;
 }
 
 div.createQuestBox div.inCreateQuestBox div.choicesListBox {

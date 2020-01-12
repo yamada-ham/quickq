@@ -28,6 +28,7 @@ $choices = isset($app->getValues()->choice)?$app->getValues()->choice:'';
         <p>1.アンケートの内容を記述してください。</p>
         <textarea name="questTitle" class="questTitle" placeholder="例1:カレーに豆腐を入れる。
 例2:好きな種類の音楽は？" maxlength="200"><?= isset($app->getValues()->questTitle) ? h($app->getValues()->questTitle) : ''; ?></textarea>
+<span class="questTitleTtextLength"></span>
       </div>
 <!-- &#10 改行文字 -->
 

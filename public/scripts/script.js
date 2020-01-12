@@ -19,6 +19,9 @@ $(function(){
   if($(".childInCreateCategoryBox") != null){
     createCategory();
   }
+  if($("div.questTitleBox > textarea.questTitle").length){
+    getTextareaLength();
+  }
 });
 
 function createCategory(){
@@ -108,6 +111,13 @@ function slide(){
         $(this).addClass('rotate225');
       }
     $(this).next("ul").slideToggle();
+  });
+}
+
+function getTextareaLength(){
+  $("textarea.questTitle").on("keyup",(e)=>{
+    let textLength = $("textarea.questTitle").val().length;
+    $(".questTitleTtextLength").text(`${textLength}/200`);
   });
 }
 
