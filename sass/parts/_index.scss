@@ -36,6 +36,9 @@ ul.questLimitBox{
       margin-bottom:10px;
       border:solid rgb(255, 209, 171) 6px;
       border-radius: 20px;
+      @include media(l){
+        padding:8px;
+      }
       div{
         h2{
           display:inline-block;

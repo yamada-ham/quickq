@@ -17,13 +17,13 @@ $app->run(h($app->me()->id));
 <body>
 <div id="wrap">
 <?php require_once(PARTS_PASS .'headerPart.php') ?>
-<div class="accountInfoBox">
+<!-- <div class="accountInfoBox">
   <div class="inAccountInfoBox">
     <div class="accountBarBox">
       <p><?= h($app->me()->userName);?>さん</p>
     </div>
   </div>
-</div>
+</div> -->
 <div class="createdQuestHistoryBox">
   <div class="inCreatedQuestHistoryBox">
   <h3>作成したアンケート</h3>

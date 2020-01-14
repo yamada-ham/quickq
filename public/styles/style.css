@@ -344,6 +344,12 @@ ul.questLimitBox li.newListBox div.inNewListBox {
   border-radius: 20px;
 }
 
+@media only screen and (min-width: 991px) {
+  ul.questLimitBox li.newListBox div.inNewListBox {
+    padding: 8px;
+  }
+}
+
 ul.questLimitBox li.newListBox div.inNewListBox div h2 {
   display: inline-block;
   position: relative;
@@ -981,7 +987,7 @@ div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBo
   text-decoration: none;
   width: 50px;
   height: 50px;
-  line-height: 50px;
+  line-height: 46px;
   font-size: 40px;
   border-radius: 50%;
   text-align: center;
@@ -1109,6 +1115,12 @@ div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox {
   margin-right: auto;
 }
 
+@media only screen and (min-width: 767px) {
+  div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox {
+    width: 40%;
+  }
+}
+
 div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox input[type="submit"] {
   display: inline-block;
   border-radius: 5%;
@@ -1141,6 +1153,12 @@ div.createdQuestHistoryBox {
   margin-right: auto;
 }
 
+@media only screen and (min-width: 991px) {
+  div.createdQuestHistoryBox {
+    width: 60%;
+  }
+}
+
 div.createdQuestHistoryBox div.inCreatedQuestHistoryBox h3 {
   margin-top: 10px;
   margin-bottom: 12px;
@@ -1168,6 +1186,12 @@ div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryIn
   margin-right: 4px;
   display: inline-block;
   width: 14px;
+}
+
+@media only screen and (min-width: 991px) {
+  div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTitle p {
+    padding-left: 10px;
+  }
 }
 
 div.createdQuestHistoryBox div.inCreatedQuestHistoryBox ul li div.questHistoryTitle p a {
