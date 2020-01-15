@@ -6,7 +6,6 @@ $(function(){
   if($("#addChoiceInput")[0] != null){
     choiceInputBtn();
   }
-
   if($(".accordion_ul").length > 0){
     slide();
   }
@@ -67,8 +66,14 @@ function greetInDrwer(){
 
 function questsLimitLength(){
   let quests = document.querySelectorAll('ul.questLimitBox li.newListBox div.inNewListBox ul li a');
-
-  if(window.innerWidth >= 991){
+  if(window.innerWidth >= 1199){
+    quests.forEach((quest)=>{
+      var questText = quest.textContent;
+        if(questText.length > 33){
+          quest.textContent=questText.slice(0,33)+'...';
+        }
+    });
+  }else if(window.innerWidth >= 991){
     quests.forEach((quest)=>{
       var questText = quest.textContent;
         if(questText.length > 27){
@@ -135,6 +140,7 @@ function choiceInputBtn(){
     $clone.setAttribute('type','text');
     $li.appendChild($clone);
     $choicesList.appendChild($li);
+    $choicesList.lastElementChild.querySelector("input").focus();
   },false);
 
   document.getElementById('removeChoiceInput').addEventListener('click',function(e){
@@ -143,6 +149,7 @@ function choiceInputBtn(){
     }
     let $lastChoice = $choicesList.lastElementChild;
     $choicesList.removeChild($lastChoice);
+    $choicesList.lastElementChild.querySelector("input").focus();
   });
 }
 

@@ -20,6 +20,7 @@ class LoginController extends \MyApp\Controller {
     }
 
     $this->setValues('email',$_POST['email']);
+    $this->setValues('password',$_POST['password']);
 
     if($this->hasError()){
       return;
