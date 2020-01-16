@@ -51,6 +51,20 @@ select {
   margin: 0;
 }
 
+$breakpoints: (
+    xs: "only screen and (min-width: 320px)",
+    s: "only screen and (min-width: 575px)",
+    m: "only screen and (min-width: 767px)",
+    l: "only screen and (min-width: 991px)",
+    xl: "only screen and (min-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
 .clear:after{
 content: "";
 display: block;
@@ -82,22 +96,16 @@ div.createBox{
       height: 50px;
       text-align: center;
       line-height: 44px;
+      @include media(l){
+        font-size: 4.2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 62px;
+      }
     }
   }
 }
-$breakpoints: (
-    xs: "only screen and (min-width: 320px)",
-    s: "only screen and (min-width: 575px)",
-    m: "only screen and (min-width: 767px)",
-    l: "only screen and (min-width: 991px)",
-    xl: "only screen and (min-width: 1199px)",
-);
 
-@mixin media($breakpoint) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
-}
 // #wrap{
 //   @include media(l) {
 //         width:80%;

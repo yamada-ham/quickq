@@ -81,6 +81,15 @@ div.createBox p a {
   line-height: 44px;
 }
 
+@media only screen and (min-width: 991px) {
+  div.createBox p a {
+    font-size: 4.2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 62px;
+  }
+}
+
 @keyframes click-wave {
   0% {
     position: relative;
