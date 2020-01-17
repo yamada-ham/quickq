@@ -9,7 +9,7 @@ $userData = $app->getValues()->userData;
 <html>
 <head>
 <meta charset="utf-8">
-<title>アカウント情報の変更</title>
+<title><?=SITE_TITLE?></title>
 <meta name="viewport" content="width=device-width">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="styles/style.css">

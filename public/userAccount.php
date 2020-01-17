@@ -8,7 +8,7 @@ $app->run(h($app->me()->id));
 <html>
 <head>
 <meta charset="utf-8">
-<title>アカウント情報</title>
+<title><?=SITE_TITLE?></title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="styles/style.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>

@@ -9,7 +9,7 @@ $choices = isset($app->getValues()->choice)?$app->getValues()->choice:'';
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>アンケート作成中</title>
+<title>QuickQ</title>
 <link rel="stylesheet" href="styles/style.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
