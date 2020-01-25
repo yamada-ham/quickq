@@ -2,7 +2,7 @@ create database QuestQ character set utf8;
 
 use QuestQ
 
-create table users (
+create table users_php (
   id int not null auto_increment primary key,
   email varchar(255) unique,
   password varchar(255),

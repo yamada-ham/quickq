@@ -4,7 +4,7 @@ namespace MyApp\Model;
 class UserModel extends \MyApp\Model{
 
   public function create($values){
-    $stmt = $this->db->prepare("insert into users (email,password,userName,created,modified) values(:email,:password,:userName,now(),now())");
+    $stmt = $this->db->prepare("insert into users_php (email,password,userName,created,modified) values(:email,:password,:userName,now(),now())");
     $res = $stmt -> execute([':email'=>$values['email'],':password'=>password_hash($values['password'],PASSWORD_DEFAULT),':userName'=>$values['userName']]);
 
     if($res === false){
@@ -13,7 +13,7 @@ class UserModel extends \MyApp\Model{
   }
 
   public function login($values){
-    $stmt = $this->db->prepare("select * from users where email = :email");
+    $stmt = $this->db->prepare("select * from users_php where email = :email");
     $stmt -> execute([':email'=>$values['email']]);
     $stmt -> setFetchMode(\PDO::FETCH_CLASS,'stdClass');
     $user = $stmt->fetch();
@@ -29,7 +29,7 @@ class UserModel extends \MyApp\Model{
   }
 
   // public function findAll(){
-  //   $stmt = $this->db->query("select * from users order by id");
+  //   $stmt = $this->db->query("select * from users_php order by id");
   //   $stmt->setFetchMode(\PDO::FETCH_CLASS,'stdClass');
   //   return $stmt -> fetchAll();
   // }

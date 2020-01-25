@@ -20,7 +20,7 @@ class QuestAnswerModel extends \MyApp\Model{
   }
 
   public function answer($values){
-    $sql = "insert into answers (code,age,sex,questTitle,choice,remote_addr,user_agent,created) values(:code,:age,:sex,:questTitle,:choice,:remote_addr,:user_agent,now())";
+    $sql = "insert into answers (code,age,sex,questTitle,choice,remote_addr,user_agent,created,	modified) values(:code,:age,:sex,:questTitle,:choice,:remote_addr,:user_agent,now(),now())";
     $stmt=$this->db->prepare($sql);
 
     $stmt->bindValue(':code',$values['code'],\PDO::PARAM_STR);
