@@ -50,7 +50,7 @@ $app->run();
           <p class="inSubmitBox">
             <input type="submit" name="id" value="サインアップ">
           </p>
-        </div>
+          </div>
         <div class="signupBox">
           <p class="inSignupBox"><a href="<?= SITE_URL . '/login.php'?>">すでにアカウントはお持ちですか？</a></p>
         </div>

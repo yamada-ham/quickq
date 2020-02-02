@@ -101,6 +101,14 @@ div.overlay{
   position: fixed;
   z-index:96;
   display: none;
+  div.btnCloseBox{
+    position: absolute;
+    left:264px;
+    top:20px;
+    img{
+      width:24px;
+    }
+  }
 }
 
 nav.drwerMenuBox{

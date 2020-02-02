@@ -230,6 +230,16 @@ div.overlay {
   display: none;
 }
 
+div.overlay div.btnCloseBox {
+  position: absolute;
+  left: 264px;
+  top: 20px;
+}
+
+div.overlay div.btnCloseBox img {
+  width: 24px;
+}
+
 nav.drwerMenuBox {
   top: 0;
   left: -250px;

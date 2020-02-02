@@ -34,7 +34,7 @@
         <ul>
         <li class="login"><a href="login.php">ログイン</a></li>
         <li class="signup"><a href="signup.php">アカウント作成はこちら</a></li>
-      </ul>
+        </ul>
       <?php endif; ?>
   </div>
 </nav>
