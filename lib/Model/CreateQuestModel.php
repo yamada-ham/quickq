@@ -3,7 +3,7 @@ namespace MyApp\Model;
 
 class CreateQuestModel extends \MyApp\Model{
   public function create($values){
-    $stmt = $this->db->prepare("insert into quests(questTitle,choicesNum,choicesList,category,code,userId,created,modified) values(:questTitle,:choicesNum,:choicesList,:category,:code,:userId,now(),now())");
+    $stmt = $this->db->prepare("insert into quests(questTitle,choicesNum,choicesList,category,code,userId,created_at,updated_at) values(:questTitle,:choicesNum,:choicesList,:category,:code,:userId,now(),now())");
 
     $stmt->bindValue(':questTitle',$values['questTitle'],\PDO::PARAM_STR);
 

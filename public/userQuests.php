@@ -31,7 +31,7 @@ $app->run(h($app->me()->id));
       <?php foreach($app->getValues()->userQuests as $userQuest):?>
         <li>
           <div class="questHistoryInfo clear">
-            <p>作成日:<?= $app->dateFormat($userQuest->created);?></p>
+            <p>作成日:<?= $app->dateFormat($userQuest->created_at);?></p>
             <p class="answerNum"><img src='./image/icon/anserNumIcon.png' class="answerNumIcon"><span><?= $userQuest->numberOfResponses ?><span></p>
           </div>
           <div class="questHistoryTitle">
