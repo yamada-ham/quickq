@@ -1,4 +1,4 @@
-class quickq{
+class Quickq{
   constructor(){
       this.drwer();
       this.choiceInputBtn();
@@ -182,5 +182,5 @@ class quickq{
 
 $(function(){
   'use strict';
-  let app = new quickq();
+  let app = new Quickq();
 });
