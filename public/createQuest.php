@@ -51,7 +51,7 @@ $choices = isset($app->getValues()->choice)?$app->getValues()->choice:'';
       </div>
 
       <div class="createCategoryBox">
-        <p>3.カテゴリーを選択してください。</p>
+        <p>3.カテゴリーを二つ選択してください。</p>
         <div class="parentInCreateCategoryBox">
           <select class="parentCategory">
             <option value="" selected="selected" disabled>選択</option>
@@ -61,7 +61,7 @@ $choices = isset($app->getValues()->choice)?$app->getValues()->choice:'';
           </select>
         </div>
 
-        <div class="childInCreateCategoryBox hidden">
+        <div class="childInCreateCategoryBox">
           <select name="category" class="childCategory" disabled>
             <option value="" selected="selected" disabled>選択</option>
             <?php foreach(CATEGORY as $key => $arr ) :?>
