@@ -65,11 +65,10 @@ $app->run();
   </div>
 </div><!-- categoryBox -->
 
-
-  <div class='createBox'>
-    <p><a href="createQuest.php">+</a></p>
-  </div>
-  <?php require_once(PARTS_PASS .'footerPart.php') ?>
+<div class='createBox'>
+  <p><a href="createQuest.php">+</a></p>
+</div>
+<?php require_once(PARTS_PASS .'footerPart.php') ?>
 
 </div><!-- #wrap -->
 <script type="text/javascript" src="scripts/script.js"></script>
